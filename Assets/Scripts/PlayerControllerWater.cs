@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerWater : MonoBehaviour
 {
     #region VARIABLES
     // Variables Float
@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public float speedMultiplier = 1.0f;
-    public float xSpeed = 5;
-    public float ySpeed = 5;
+    public float xSpeed = 3;
+    public float ySpeed = 3;
     public float gravityWater = 0f;
     public float gravityBase = 1f;
 
@@ -57,9 +57,10 @@ public class PlayerController : MonoBehaviour
         {
             horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
             verticalInput = Input.GetAxisRaw("Vertical"); //Detecta cuando pulsas las flechas Izquierda / Derecha
+            movement = new Vector2(horizontalInput, verticalInput); //variable de control para los idle
+
             transform.Translate(Vector2.right * xSpeed * speedMultiplier * horizontalInput * Time.deltaTime);
             if (!isGrounded) transform.Translate(Vector2.up * ySpeed * speedMultiplier * verticalInput * Time.deltaTime);
-            movement = new Vector2(horizontalInput, verticalInput); //variable de control para los idle
 
             // Flip character
             if (horizontalInput < 0f && _facingRight == true)
