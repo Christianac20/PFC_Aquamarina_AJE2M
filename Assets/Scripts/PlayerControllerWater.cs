@@ -133,27 +133,34 @@ public class PlayerControllerWater : MonoBehaviour
     #region ISGROUNDED CHECKING
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //movementScript.isGrounded = true;
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = true;
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
-    { 
+    {
+        //Detecta colision de entrada con agua
         if (collision.gameObject.tag == ("Water"))
         {
             isInWater = true;
+        }
+
+        //Detecta colision de entrada con una burbuja de aire
+        if (collision.gameObject.tag == ("AirBubble")) 
+        {
+            timer.currentTime += timer.addAir;
+            Destroy(collision.gameObject);
+        }
+
+        //Detecta colision de entrada con un collider de daño
+        if (collision.gameObject.tag == ("Damage"))
+        {
+            timer.currentTime -= timer.depleteAir;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = false;
-        }
+        
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -164,5 +171,5 @@ public class PlayerControllerWater : MonoBehaviour
         }
     }
 
-    #endregion 
+    #endregion
 }
