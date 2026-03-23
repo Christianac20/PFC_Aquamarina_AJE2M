@@ -15,8 +15,6 @@ public class PlayerControllerWater : MonoBehaviour
     public float speedMultiplier = 1.0f;
     public float xSpeed = 3;
     public float ySpeed = 3;
-    public float gravityWater = 0f;
-    public float gravityBase = 1f;
 
     // Variables Animator
     [Header("Variables del Animator")]
@@ -32,9 +30,10 @@ public class PlayerControllerWater : MonoBehaviour
     //public Animator animator;
     public Rigidbody2D rigidbodyPlayer;
 
-    //Variables Compuestas
-    [Header("Variables compuestas")]
+    //Otras Variables
+    [Header("Otras Variables")]
     Vector2 movement;
+    public Timer timer;
 
     //Manejo de audio
     //public AudioManager audioManager;
@@ -45,6 +44,7 @@ public class PlayerControllerWater : MonoBehaviour
         #region GUARDAR REFERENCIAS
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        timer = GetComponent<Timer>();
         //animator = GetComponent<Animator>();
         #endregion
     }
@@ -73,12 +73,9 @@ public class PlayerControllerWater : MonoBehaviour
             }
         }
 
-
-
         // Llamo a las funciones modificadoras del movimiento
         AnimationTagCheck();
         Run();
-        AdaptGravity();
         #endregion
 
         #region ANIMATOR VARIABLES SET
@@ -102,19 +99,6 @@ public class PlayerControllerWater : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
-    //Adaptar gravedad a estar dentro o fuera del agua
-    private void AdaptGravity()
-    {
-        if (!isInWater)
-        {
-            rigidbodyPlayer.gravityScale = gravityBase;
-        }
-        else if (isInWater)
-        {
-            rigidbodyPlayer.gravityScale = gravityWater;
-        }
-    }
-
     // Nos aseguramos de que este pulsando o no el botón de correr
     private void Run()
     {
@@ -122,11 +106,13 @@ public class PlayerControllerWater : MonoBehaviour
         {
             speedMultiplier = 2f;
             isRunning = true;
+            timer.timeDecreaseSpeed = 2f;
         }
         else
         {
             speedMultiplier = 1.0f;
             isRunning = false;
+            timer.timeDecreaseSpeed = 1.0f;
         }
     }
     
@@ -147,27 +133,34 @@ public class PlayerControllerWater : MonoBehaviour
     #region ISGROUNDED CHECKING
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //movementScript.isGrounded = true;
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = true;
-        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
-    { 
+    {
+        //Detecta colision de entrada con agua
         if (collision.gameObject.tag == ("Water"))
         {
             isInWater = true;
+        }
+
+        //Detecta colision de entrada con una burbuja de aire
+        if (collision.gameObject.tag == ("AirBubble")) 
+        {
+            timer.currentTime += timer.addAir;
+            Destroy(collision.gameObject);
+        }
+
+        //Detecta colision de entrada con un collider de daño
+        if (collision.gameObject.tag == ("Damage"))
+        {
+            timer.currentTime -= timer.depleteAir;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = false;
-        }
+        
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -178,5 +171,5 @@ public class PlayerControllerWater : MonoBehaviour
         }
     }
 
-    #endregion 
+    #endregion
 }

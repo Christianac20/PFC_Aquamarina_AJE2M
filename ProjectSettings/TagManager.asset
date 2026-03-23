@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Water
+  - Damage
+  - AirBubble
   layers:
   - Default
   - TransparentFX
