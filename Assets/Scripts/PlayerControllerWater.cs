@@ -34,6 +34,7 @@ public class PlayerControllerWater : MonoBehaviour
     [Header("Otras Variables")]
     Vector2 movement;
     public Timer timer;
+    public SceneTransition sceneTransition;
 
     //Manejo de audio
     //public AudioManager audioManager;
@@ -135,37 +136,43 @@ public class PlayerControllerWater : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Detecta colision de entrada con agua
-        if (collision.gameObject.tag == ("Water"))
-        {
-            isInWater = true;
-        }
-
-        //Detecta colision de entrada con una burbuja de aire
-        if (collision.gameObject.tag == ("AirBubble")) 
-        {
-            timer.currentTime += timer.addAir;
-            Destroy(collision.gameObject);
-        }
-
-        //Detecta colision de entrada con un collider de daño
-        if (collision.gameObject.tag == ("Damage"))
-        {
-            timer.currentTime -= timer.depleteAir;
-        }
-    }
-
     void OnCollisionExit2D(Collision2D collision)
     {
         
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.tag == ("Water"))
+        //Detecta colision de entrada con agua
+        if (trigger.gameObject.tag == ("Water"))
+        {
+            isInWater = true;
+        }
+
+        //Detecta colision de entrada con un trigger de aire
+        if (trigger.gameObject.tag == ("AirBubble")) 
+        {
+            timer.currentTime += timer.addAir;
+            Destroy(trigger.gameObject);
+        }
+
+        //Detecta colision de entrada con un trigger de daño
+        if (trigger.gameObject.tag == ("Damage"))
+        {
+            timer.currentTime -= timer.depleteAir;
+        }
+
+        //Detecta colision de entrada con un trigger de daño
+        if (trigger.gameObject.tag == ("Teleporter"))
+        {
+            Debug.Log("TP");
+            sceneTransition.SceneChange();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D trigger)
+    {
+        if (trigger.gameObject.tag == ("Water"))
         {
             isInWater = false;
         }
