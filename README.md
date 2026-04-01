@@ -2,4 +2,6 @@
 
 Explora. Descubre.
 
-Mecanica de vida basada en aire.
+Movimiento Subacuático y Terrestre.
+Mecanica de vida basada en aire. 
+Transición entre escenas limpia con fundido a negro y conservacion de datos entre distintas escenas.
