@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Kris_TR_PlayerController.unity
+    path: Assets/Scenes/TestRooms/Kris_TR_SceneChange1.unity
+    guid: 4313fea5b0e21a946a02ec1eaa1521ff
+  - enabled: 1
+    path: Assets/Scenes/TestRooms/Kris_TR_SceneChange2.unity
+    guid: 513e47115cd972a4583105d90fd17d71
+  - enabled: 1
+    path: Assets/Scenes/TestRooms/Kris_TR_PlayerController.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

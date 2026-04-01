@@ -35,6 +35,12 @@ public class Timer : MonoBehaviour
             currentTime = 0f;
         }
 
+        //Evitar que el contador suba de la capacidad máxima del tanque de 02
+        if (currentTime > totalTime)
+        {
+            currentTime = totalTime;
+        }
+
         //Metodo para actualizar el timer en pantalla
         UpdateTimerUI();
     }
