@@ -231,6 +231,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
+--- !u!1 &124418432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6294446324980512470, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
+  m_PrefabInstance: {fileID: 97330294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128220651
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603082184}
+  - component: {fileID: 603082185}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -621,6 +627,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603082185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603082182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e4814508ec752c45894f1f2761c0c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepObjects:
+  - {fileID: 603082182}
+  - {fileID: 519420028}
+  - {fileID: 1243147915}
+  - {fileID: 124418432}
+  - {fileID: 2038547002}
+  - {fileID: 1251470753}
+  sceneTransition: {fileID: 0}
 --- !u!1 &680335519
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +805,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &896461033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896461034}
+  m_Layer: 0
+  m_Name: PositionPlayerOnEntry
+  m_TagString: PositionPlayerOnEntry
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &896461034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896461033}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &912242065 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2300391704141812986, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
@@ -1106,6 +1163,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1243147915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2052551643748569451, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
+  m_PrefabInstance: {fileID: 7566672006108724349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251470753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1248,7 @@ GameObject:
   - component: {fileID: 1304370049}
   - component: {fileID: 1304370048}
   - component: {fileID: 1304370047}
+  - component: {fileID: 1304370052}
   m_Layer: 0
   m_Name: TP
   m_TagString: Teleporter
@@ -1332,6 +1395,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304370052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304370046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bad6676fced3624b924cd9e1e4010fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Kris_TR_TP2
+  animacionFinal: {fileID: 7400000, guid: e0de8ced1fa16b94395025d58caddb10, type: 2}
+  player: {fileID: 0}
+  playerPositionOnEnter: {fileID: 0}
+  canvasFades: {fileID: 0}
 --- !u!1 &1345219465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,28 +2049,13 @@ GameObject:
   - component: {fileID: 2038547006}
   - component: {fileID: 2038547005}
   - component: {fileID: 2038547004}
-  - component: {fileID: 2038547003}
   m_Layer: 5
   m_Name: Canvas_TransicionEscena
-  m_TagString: Untagged
+  m_TagString: PanelFades
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2038547003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038547002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bad6676fced3624b924cd9e1e4010fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: Kris_TR_TP2
-  animacionFinal: {fileID: 7400000, guid: e0de8ced1fa16b94395025d58caddb10, type: 2}
 --- !u!95 &2038547004
 Animator:
   serializedVersion: 5
@@ -2320,10 +2385,6 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 7566672006108724350}
-    - target: {fileID: 9222884955552925668, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
-      propertyPath: sceneTransition
-      value: 
-      objectReference: {fileID: 2038547003}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2334,7 +2395,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3165942350388488055, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
   m_PrefabInstance: {fileID: 7566672006108724349}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1243147915}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fa7358e786c5e44c98d7fc14f169e7b, type: 3}
@@ -2346,6 +2407,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 7566672006108724349}
+  - {fileID: 896461034}
   - {fileID: 1304370050}
   - {fileID: 128220652}
   - {fileID: 97330294}

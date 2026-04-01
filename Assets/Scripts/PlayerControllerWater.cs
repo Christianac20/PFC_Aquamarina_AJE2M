@@ -33,16 +33,17 @@ public class PlayerControllerWater : MonoBehaviour
     //Otras Variables
     [Header("Otras Variables")]
     Vector2 movement;
-    public Timer timer;
-    public SceneTransition sceneTransition;
+    [SerializeField] Timer timer;
+    [SerializeField] SceneTransition sceneTransition;
 
     //Manejo de audio
     //public AudioManager audioManager;
     #endregion
 
-    void Awake() //Usado para guardar componentes al iniciar
+    void Start() //Usado para guardar componentes al iniciar
     {
         #region GUARDAR REFERENCIAS
+        sceneTransition = FindObjectOfType<SceneTransition>();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
@@ -52,6 +53,11 @@ public class PlayerControllerWater : MonoBehaviour
 
     void Update()
     {
+        if (sceneTransition == null)
+        {
+            sceneTransition = FindObjectOfType<SceneTransition>();
+        }
+
         #region MOVEMENT
         // Movimiento lateral basico
         if (isAttacking == false)
@@ -162,7 +168,7 @@ public class PlayerControllerWater : MonoBehaviour
             timer.currentTime -= timer.depleteAir;
         }
 
-        //Detecta colision de entrada con un trigger de daño
+        //Detecta colision de entrada con un trigger de cambio de escena
         if (trigger.gameObject.tag == ("Teleporter"))
         {
             Debug.Log("TP");

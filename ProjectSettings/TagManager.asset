@@ -9,6 +9,8 @@ TagManager:
   - Damage
   - AirBubble
   - Teleporter
+  - PositionPlayerOnEntry
+  - PanelFades
   layers:
   - Default
   - TransparentFX

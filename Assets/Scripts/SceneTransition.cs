@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     #region VARIABLES
-    Animator animator;
-    [SerializeField] string scene;
+    Animator canvasAnimator;
+    public string scene;
     [SerializeField] AnimationClip animacionFinal;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject playerPositionOnEnter;
+    [SerializeField] GameObject canvasFades;
 
     #endregion
 
@@ -16,16 +19,20 @@ public class SceneTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        canvasFades = GameObject.FindWithTag("PanelFades");
+        canvasAnimator = canvasFades.GetComponent<Animator>();
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*//Cambio de escena por tecla. Test Inicial. Deprecated
         if (Input.GetKeyUp(KeyCode.T))
         {
             StartCoroutine(ChangeScene());
         }
+        */
     }
 
     public void SceneChange()
@@ -35,11 +42,15 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        animator.SetTrigger("Iniciar");
+        canvasAnimator.SetTrigger("Iniciar");
 
         yield return new WaitForSeconds(animacionFinal.length);
 
         SceneManager.LoadScene(scene);
+
+        playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
+        player.transform.position = playerPositionOnEnter.transform.position;
     }
+
     #endregion
 }
