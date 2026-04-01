@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     #region VARIABLES
     public GameObject[] keepObjects;
-    public SceneTransition sceneTransition;
 
     #endregion
 
@@ -14,8 +13,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneTransition = FindObjectOfType<SceneTransition>();
-
         for (int i = 0; i < keepObjects.Length; i++)
         {
             DontDestroyOnLoad(keepObjects[i]);
