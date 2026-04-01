@@ -12,6 +12,8 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
+    [SerializeField] PlayerControllerWater playerControllerWater;
+    [SerializeField] PlayerControllerGround playerControllerGround;
 
     #endregion
 
@@ -22,6 +24,8 @@ public class SceneTransition : MonoBehaviour
         canvasFades = GameObject.FindWithTag("PanelFades");
         canvasAnimator = canvasFades.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
+        playerControllerWater = FindObjectOfType<PlayerControllerWater>();
+        playerControllerGround = FindObjectOfType<PlayerControllerGround>();
     }
 
     // Update is called once per frame
@@ -44,12 +48,34 @@ public class SceneTransition : MonoBehaviour
     {
         canvasAnimator.SetTrigger("Iniciar");
 
+        //Desactivo los controles del player
+        if (playerControllerWater != null)
+        {
+            playerControllerWater.enabled = false;
+        }
+        if (playerControllerGround != null)
+        {
+            playerControllerGround.enabled = false;
+        }
+
+
         yield return new WaitForSeconds(animacionFinal.length);
 
         SceneManager.LoadScene(scene);
 
+        //muevo al player al punto de la pantalla en que quiero que aparezca
         playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
         player.transform.position = playerPositionOnEnter.transform.position;
+
+        //Reactivo los controles del player
+        if (playerControllerWater != null)
+        {
+            playerControllerWater.enabled = true;
+        }
+        if (playerControllerGround != null)
+        {
+            playerControllerGround.enabled = true;
+        }
     }
 
     #endregion
