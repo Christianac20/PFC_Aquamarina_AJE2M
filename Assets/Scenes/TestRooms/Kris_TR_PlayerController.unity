@@ -988,7 +988,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1085,8 +1085,8 @@ Transform:
   m_GameObject: {fileID: 1304370046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.92, y: 0.03, z: 0}
-  m_LocalScale: {x: 1, y: 3.7016, z: 1}
+  m_LocalPosition: {x: 9.49, y: 0.17, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1656,10 +1656,6 @@ PrefabInstance:
     - target: {fileID: 2341072025962650556, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3165942350388488055, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
-      propertyPath: timerText
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

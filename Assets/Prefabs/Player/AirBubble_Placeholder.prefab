@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4251562168410595114}
   - component: {fileID: 460821722453521985}
   m_Layer: 0
-  m_Name: AirBubble
+  m_Name: AirBubble_Placeholder
   m_TagString: AirBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

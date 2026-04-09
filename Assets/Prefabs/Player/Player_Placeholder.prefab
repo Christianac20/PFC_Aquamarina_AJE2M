@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 3527153690536485563}
   - component: {fileID: 9222884955552925668}
   - component: {fileID: 3165942350388488055}
+  - component: {fileID: 4502452204027506033}
+  - component: {fileID: 8433538514638204891}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player_Placeholder
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,10 +76,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 615320279
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3b06ed6c384d8794a9f8b177b53f0957, type: 3}
+  m_Sprite: {fileID: 1970690455, guid: 007dda0b109fc1a44bf6dcb40f1b917a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1.4}
+  m_Offset: {x: 0, y: -0.011065125}
+  m_Size: {x: 0.411479, y: 1.3159051}
   m_Direction: 0
 --- !u!50 &3527153690536485563
 Rigidbody2D:
@@ -171,7 +173,8 @@ MonoBehaviour:
   isInWater: 0
   spriteRenderer: {fileID: 0}
   rigidbodyPlayer: {fileID: 0}
-  timer: {fileID: 0}
+  timer: {fileID: 3165942350388488055}
+  sceneTransition: {fileID: 0}
 --- !u!114 &3165942350388488055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,3 +193,37 @@ MonoBehaviour:
   currentTime: 0
   addAir: 20
   depleteAir: 10
+--- !u!95 &4502452204027506033
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052551643748569451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50adb01a5c60a1b4bb1c43fb45f906b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8433538514638204891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052551643748569451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825a8166ab8d0e74ca46f2f11064094f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 1
