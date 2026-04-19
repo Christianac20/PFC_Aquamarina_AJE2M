@@ -292,10 +292,21 @@
                 {
                     "name": "",
                     "id": "9485099b-213a-4978-b5c3-cc17c2e2caeb",
-                    "path": "<Keyboard>/2",
+                    "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Equipo3_NetLauncher",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f27ab015-ba35-4b06-90bb-9f53299dcaca",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Equipo3_NetLauncher",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -13,6 +13,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] InputActionAsset inputActionAsset;
 
     [SerializeField] InputAction actionMove;
+    [SerializeField] InputAction actionAttack;
     [SerializeField] InputAction actionRun;
     [SerializeField] InputAction actionEquipo1Camera;
     [SerializeField] InputAction actionEquipo2Net;
@@ -25,18 +26,18 @@ public class PlayerControllerWater : MonoBehaviour
 
     [Header("Variables del Animator")]
     [SerializeField] bool isAttacking;
-    [SerializeField] bool isGrounded;
-    [SerializeField] bool isInWater;
     [SerializeField] bool isRunning;
+    [SerializeField] bool movementY;
     [SerializeField] bool cameraEquipped;
+    [SerializeField] bool cameraTakePhoto;
     [SerializeField] bool netEquipped;
-    [SerializeField] bool netlauncherEquipped;
+    [SerializeField] bool netLauncherEquipped;
     bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
-    public SpriteRenderer spriteRenderer;
-    //public Animator animator;
-    public Rigidbody2D rigidbodyPlayer;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Animator animator;
+    [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
     [SerializeField] SceneTransition sceneTransition;
 
@@ -45,14 +46,16 @@ public class PlayerControllerWater : MonoBehaviour
 
     //[Header("Manejo de audio")]
     //public AudioManager audioManager;
+
     #endregion
 
     #region METHODS
-    void Awake() //Asigno componentes y actions
+    void Awake() //ASIGNO COMPONENTES Y ACTIONS
     {
         //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
         actionMove = InputSystem.actions.FindAction("Move");
         actionRun = InputSystem.actions.FindAction("Run");
+        actionAttack = InputSystem.actions.FindAction("Attack");
         actionEquipo1Camera = InputSystem.actions.FindAction("Equipo1_Camera");
         actionEquipo2Net = InputSystem.actions.FindAction("Equipo2_Net");
         actionEquipo3NetLauncher = InputSystem.actions.FindAction("Equipo3_NetLauncher");
@@ -62,28 +65,47 @@ public class PlayerControllerWater : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        //Movement vector
         moveAmmount = actionMove.ReadValue<Vector2>();
 
+        //Checking Vertical Movement for animator state machine
+        if (moveAmmount.y == 0)
+        {
+            movementY = false; 
+        }
+        else
+        {
+            movementY = true;
+        }
+
+        //If scene transition script isn´t assigned, find it and assign it
         if (sceneTransition == null)
         {
             sceneTransition = FindObjectOfType<SceneTransition>();
         }
 
-        /* ANIMATOR VARIABLES SETTING
-        // Asigno variables a parametros del animator
-        animator.SetBool("Idle", movement == Vector2.zero);
-        animator.SetBool("IsGrounded", isGrounded);
+        //EQUIPMENT FUNCTIONS
+        CameraEquip();
+        TakePhoto();
+        NetEquip();
+        NetLauncherEquip();
+
+        //ANIMATOR VARIABLES SETTINGS
+        animator.SetBool("Idle", moveAmmount == Vector2.zero);
         animator.SetBool("IsRunning", isRunning);
+        animator.SetBool("Y Moving", movementY);
         animator.SetBool("CameraEquipped", cameraEquipped);
-        */
+        animator.SetBool("NetEquipped", netEquipped);
+        animator.SetBool("NetLauncherEquipped", netLauncherEquipped);
+        animator.SetFloat("Y Movement", moveAmmount.y);
     }
 
-    void FixedUpdate()
+    void FixedUpdate() //PHYSICS BASED METHODS CALLING
     {
         Swimming();
         Run();
@@ -154,24 +176,48 @@ public class PlayerControllerWater : MonoBehaviour
     #region EQUIPMENT
     void CameraEquip()
     {
-        if (actionEquipo1Camera.IsPressed())
+        if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == false)
         {
             cameraEquipped = true;
-            
+        }
+        else if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == true)
+        {
+            cameraEquipped = false;
+        }
+        else if (moveAmmount != Vector2.zero)
+        {
+            cameraEquipped = false;
+        }
+    }
 
+    void TakePhoto()
+    {
+        if (cameraEquipped && actionAttack.WasPressedThisFrame())
+        {
+            animator.SetTrigger("CameraTakePhoto");
+        } 
+    }
+
+    void NetEquip()
+    {
+        if (actionEquipo2Net.WasPressedThisFrame())
+        {
+            netEquipped = true;
+        }
+    }
+
+    void NetLauncherEquip()
+    {
+        if (actionEquipo3NetLauncher.WasPressedThisFrame())
+        {
+            netLauncherEquipped = true;
         }
     }
     #endregion
-    
+
     #region TRIGGERS COLLISIONS CHECKING
     void OnTriggerEnter2D(Collider2D trigger)
     {
-        //Detects if player is in watter
-        if (trigger.gameObject.tag == ("Water"))
-        {
-            isInWater = true;
-        }
-
         //Detects if player gathers an air bubble
         if (trigger.gameObject.tag == ("AirBubble")) 
         {
@@ -183,6 +229,7 @@ public class PlayerControllerWater : MonoBehaviour
         if (trigger.gameObject.tag == ("Damage"))
         {
             timer.currentTime -= timer.depleteAir;
+            animator.SetTrigger("DamageTaken");
         }
 
         //Detects if player touches a teleporter collider
@@ -195,10 +242,7 @@ public class PlayerControllerWater : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == ("Water"))
-        {
-            isInWater = false;
-        }
+        
     }
     #endregion TRIGGERS COLLISIONS CHECKING
 
