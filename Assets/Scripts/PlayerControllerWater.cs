@@ -35,6 +35,7 @@ public class PlayerControllerWater : MonoBehaviour
     bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
+    [SerializeField] PlayerControllerWater playerControllerWater;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbodyPlayer;
@@ -61,6 +62,7 @@ public class PlayerControllerWater : MonoBehaviour
         actionEquipo3NetLauncher = InputSystem.actions.FindAction("Equipo3_NetLauncher");
 
         //ASIGNO LAS VARIABLES DE COMPONENTES
+        playerControllerWater = GetComponent<PlayerControllerWater>();
         sceneTransition = FindObjectOfType<SceneTransition>();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -89,6 +91,9 @@ public class PlayerControllerWater : MonoBehaviour
             sceneTransition = FindObjectOfType<SceneTransition>();
         }
 
+        //CHECKING IF PLAYER DIED
+        CheckDeath();
+
         //EQUIPMENT FUNCTIONS
         CameraEquip();
         TakePhoto();
@@ -110,6 +115,15 @@ public class PlayerControllerWater : MonoBehaviour
         Swimming();
         Run();
         AnimationTagCheck();
+    }
+
+    void CheckDeath()
+    {
+        if (timer.currentTime <= 0)
+        {
+            animator.SetTrigger("Death");
+            playerControllerWater.enabled = false;
+        }
     }
 
     #region MOVEMENT CONTROLS
