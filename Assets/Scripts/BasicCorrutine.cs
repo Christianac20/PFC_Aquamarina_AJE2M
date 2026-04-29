@@ -14,6 +14,7 @@ public class BasicCorrutine : MonoBehaviour
     private int currentPosition = 0;
     public Transform tarject;
     private bool scared = false;
+    private Vector2 distanceDifference;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class BasicCorrutine : MonoBehaviour
 
     void Update()
     {
-        if (scared != true)
+        if (scared = false)
         {
             if (!agent.pathPending && agent.remainingDistance < 0.1)
             {
@@ -35,18 +36,21 @@ public class BasicCorrutine : MonoBehaviour
 
             }
         }
-
+        Scared();
     }
 
-        /*
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            Debug.Log("tontaco");
-            if (collision.gameObject.tag  == ("Player"))
-            {
-               transform.Translate(new Vector2((tarject.position.x)-(transform.position.x), (tarject.position.x)-(transform.position.y)));
-            }
-        }
-        */
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if(collision.gameObject.tag == ("Player"))
+       {
+            scared = true;
+       }
+    }
+
+    void Scared()
+    {
+        distanceDifference = (transform.position - tarject.position);
+        transform.Translate(distanceDifference * Time.deltaTime);
+    }
 }
 
