@@ -11,6 +11,35 @@ TagManager:
   - Teleporter
   - PositionPlayerOnEntry
   - PanelFades
+  - PezPayaso
+  - CaballitoDeMar
+  - PezGlobo
+  - PezCirujanoAzul
+  - Anchoa
+  - MedusaLuna
+  - Raya
+  - PezCometa
+  - Atun
+  - Barracuda
+  - Delfin
+  - TortugaBoba
+  - TiburonBlanco
+  - PezLuna
+  - Orca
+  - AngelMarino
+  - PezHacha
+  - Gamba
+  - PezFoco
+  - PezCristal
+  - Pulpo
+  - Calamar
+  - PezComecocos
+  - AnguilaPelicano
+  - PezBala
+  - PezLinterna
+  - PezDinosaurio
+  - PezGato
+  - PezLaboratorio
   layers:
   - Default
   - TransparentFX
