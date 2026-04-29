@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DialogueTest : MonoBehaviour
+public class Dialogue : MonoBehaviour
 {
 
     #region VARIABLES
