@@ -18,6 +18,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] InputAction actionEquipo1Camera;
     [SerializeField] InputAction actionEquipo2Net;
     [SerializeField] InputAction actionEquipo3NetLauncher;
+    [SerializeField] InputAction actionInteract;
 
     [Header("Variables generales")]
     [SerializeField] Vector2 moveAmmount;
@@ -60,6 +61,7 @@ public class PlayerControllerWater : MonoBehaviour
         actionEquipo1Camera = InputSystem.actions.FindAction("Equipo1_Camera");
         actionEquipo2Net = InputSystem.actions.FindAction("Equipo2_Net");
         actionEquipo3NetLauncher = InputSystem.actions.FindAction("Equipo3_NetLauncher");
+        actionInteract = InputSystem.actions.FindAction("Interact");
 
         //ASIGNO LAS VARIABLES DE COMPONENTES
         playerControllerWater = GetComponent<PlayerControllerWater>();
