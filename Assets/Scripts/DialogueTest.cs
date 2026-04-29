@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueTest : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class DialogueTest : MonoBehaviour
     [SerializeField] private AudioClip npcVoice; // Referencia al audio que se reproducirá durante el diálogo, si es necesario.
     [SerializeField] private AudioClip playerVoice; // Referencia al audio que se reproducirá durante el diálogo, si es necesario.
     [SerializeField] private AudioSource audioSource; // Referencia al audio que se reproducirá durante el diálogo, si es necesario.
+    [SerializeField] private Image portraitNPC; // Referencia a la iamgen portrait que se mostrará del NPC hablando.
+    [SerializeField] private Image portraitPlayer; // Referencia a la iamgen portrait que se mostrrará del player hablando.
 
     #endregion
 
@@ -39,7 +42,7 @@ public class DialogueTest : MonoBehaviour
     // Update is called once per frame. Used to see what the player does each frame.
     void Update()
     {
-        if(isPlayerInRange && Input.GetKeyDown(KeyCode.F))
+        if(isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             if (!didDialogueStart)
             {
@@ -66,7 +69,6 @@ public class DialogueTest : MonoBehaviour
         StartCoroutine(ShowLine()); // Inicia la corrutina para mostrar la primera línea de diálogo.
         //Time.timeScale = 0f; // Pausa el juego para que el jugador pueda leer el diálogo sin distracciones.
         playerController.enabled = false; // Desactiva el controlador del jugador para evitar movimientos durante el diálogo.
-
     }
 
     private void NextDialogueLine()
@@ -105,9 +107,24 @@ public class DialogueTest : MonoBehaviour
         }*/
     }
 
+    private void SelectPortrait()
+    {
+        if (isPlayerTalking)
+        {
+            portraitPlayer.enabled = true; // Activa el portrait del jugador si está hablando.
+            portraitNPC.enabled = false; // Activa el portrait del jugador si está hablando.
+        }
+        else
+        {
+            portraitPlayer.enabled = false; // Desactiva el portrait del jugador si no está hablando.
+            portraitNPC.enabled = true; // Activa el portrait del NPC si está hablando.
+        }
+    }
+
     private IEnumerator ShowLine()
     {
         SelectAudioClip(); // Selecciona el clip de audio correcto según quién esté hablando.
+        SelectPortrait(); // Selecciona el portrait correcto según quién esté hablando.
         dialogueText.text = string.Empty;
         int charIndex = 0; // Índice del carácter actual que se está mostrando.
 
