@@ -4,101 +4,150 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.InputSystem;
 
 public class PlayerControllerWater : MonoBehaviour
 {
     #region VARIABLES
-    // Variables Float
-    [Header("Variables Float")]
-    public float horizontalInput;
-    public float verticalInput;
-    public float speedMultiplier = 1.0f;
-    public float xSpeed = 3;
-    public float ySpeed = 3;
+    [Header("Variables Input System")]
+    [SerializeField] InputActionAsset inputActionAsset;
 
-    // Variables Animator
+    [SerializeField] InputAction actionMove;
+    [SerializeField] InputAction actionAttack;
+    [SerializeField] InputAction actionRun;
+    [SerializeField] InputAction actionEquipo1Camera;
+    [SerializeField] InputAction actionEquipo2Net;
+    [SerializeField] InputAction actionEquipo3NetLauncher;
+
+    [Header("Variables generales")]
+    [SerializeField] Vector2 moveAmmount;
+    [SerializeField] float speedMultiplier = 1.0f;
+    [SerializeField] float speed = 3;
+
     [Header("Variables del Animator")]
-    bool isAttacking;
-    public bool isGrounded;
-    public bool isInWater;
-    bool isRunning;
-    private bool _facingRight = true;
+    [SerializeField] bool isAttacking;
+    [SerializeField] bool isRunning;
+    [SerializeField] bool movementY;
+    [SerializeField] bool cameraEquipped;
+    [SerializeField] bool cameraTakePhoto;
+    [SerializeField] bool netEquipped;
+    [SerializeField] bool netLauncherEquipped;
+    bool _facingRight = false;
 
-    //Variables de Componente
-    [Header("Variables de Componente")]
-    public SpriteRenderer spriteRenderer;
-    //public Animator animator;
-    public Rigidbody2D rigidbodyPlayer;
-
-    //Otras Variables
-    [Header("Otras Variables")]
-    Vector2 movement;
+    [Header("Variables de Componente y Scripts")]
+    [SerializeField] PlayerControllerWater playerControllerWater;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Animator animator;
+    [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
     [SerializeField] SceneTransition sceneTransition;
 
-    //Manejo de audio
+    [Header("Otras Variables")]
+    Vector2 movement;
+
+    //[Header("Manejo de audio")]
     //public AudioManager audioManager;
+
     #endregion
 
-    void Start() //Usado para guardar componentes al iniciar
+    #region METHODS
+    void Awake() //ASIGNO COMPONENTES Y ACTIONS
     {
-        #region GUARDAR REFERENCIAS
+        //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
+        actionMove = InputSystem.actions.FindAction("Move");
+        actionRun = InputSystem.actions.FindAction("Run");
+        actionAttack = InputSystem.actions.FindAction("Attack");
+        actionEquipo1Camera = InputSystem.actions.FindAction("Equipo1_Camera");
+        actionEquipo2Net = InputSystem.actions.FindAction("Equipo2_Net");
+        actionEquipo3NetLauncher = InputSystem.actions.FindAction("Equipo3_NetLauncher");
+
+        //ASIGNO LAS VARIABLES DE COMPONENTES
+        playerControllerWater = GetComponent<PlayerControllerWater>();
         sceneTransition = FindObjectOfType<SceneTransition>();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
-        //animator = GetComponent<Animator>();
-        #endregion
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
+        //Movement vector
+        moveAmmount = actionMove.ReadValue<Vector2>();
+
+        //Checking Vertical Movement for animator state machine
+        if (moveAmmount.y == 0)
+        {
+            movementY = false; 
+        }
+        else
+        {
+            movementY = true;
+        }
+
+        //If scene transition script isn´t assigned, find it and assign it
         if (sceneTransition == null)
         {
             sceneTransition = FindObjectOfType<SceneTransition>();
         }
 
-        #region MOVEMENT
-        // Movimiento lateral basico
+        //CHECKING IF PLAYER DIED
+        CheckDeath();
+
+        //EQUIPMENT FUNCTIONS
+        CameraEquip();
+        TakePhoto();
+        NetEquip();
+        NetLauncherEquip();
+
+        //ANIMATOR VARIABLES SETTINGS
+        animator.SetBool("Idle", moveAmmount == Vector2.zero);
+        animator.SetBool("IsRunning", isRunning);
+        animator.SetBool("Y Moving", movementY);
+        animator.SetBool("CameraEquipped", cameraEquipped);
+        animator.SetBool("NetEquipped", netEquipped);
+        animator.SetBool("NetLauncherEquipped", netLauncherEquipped);
+        animator.SetFloat("Y Movement", moveAmmount.y);
+    }
+
+    void FixedUpdate() //PHYSICS BASED METHODS CALLING
+    {
+        Swimming();
+        Run();
+        AnimationTagCheck();
+    }
+
+    void CheckDeath()
+    {
+        if (timer.currentTime <= 0)
+        {
+            animator.SetTrigger("Death");
+            playerControllerWater.enabled = false;
+        }
+    }
+
+    #region MOVEMENT CONTROLS
+    //MAIN BASIC MOVEMENT
+    void Swimming()
+    {
         if (isAttacking == false)
         {
-            horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
-            verticalInput = Input.GetAxisRaw("Vertical"); //Detecta cuando pulsas las flechas Izquierda / Derecha
-            movement = new Vector2(horizontalInput, verticalInput); //variable de control para los idle
+            rigidbodyPlayer.velocity = new Vector2(moveAmmount.x * speed * speedMultiplier, moveAmmount.y * speed * speedMultiplier);
 
-            transform.Translate(Vector2.right * xSpeed * speedMultiplier * horizontalInput * Time.deltaTime);
-            if (!isGrounded) transform.Translate(Vector2.up * ySpeed * speedMultiplier * verticalInput * Time.deltaTime);
-
-            // Flip character
-            if (horizontalInput < 0f && _facingRight == true)
+            //FLIP PLAYER
+            if (moveAmmount.x < 0f && _facingRight == true)
             {
                 Flip();
             }
-            else if (horizontalInput > 0f && _facingRight == false)
+            else if (moveAmmount.x > 0f && _facingRight == false)
             {
                 Flip();
             }
         }
-
-        // Llamo a las funciones modificadoras del movimiento
-        AnimationTagCheck();
-        Run();
-        #endregion
-
-        #region ANIMATOR VARIABLES SET
-        /*
-        // Asigno variables a parametros del animator
-        animator.SetBool("Idle", movement == Vector2.zero);
-        animator.SetBool("IsGrounded", isGrounded);
-        animator.SetBool("IsRunning", isRunning);
-        */
-        #endregion 
     }
 
-    #region METODOS MODIFICADORES DEL MOVIMIENTO
-
-    //Corregimos la orientación del player
-    private void Flip()
+    //FIX PLAYER ORIENTATION
+    void Flip()
     {
         _facingRight = !_facingRight;
 		float localScaleX = transform.localScale.x;
@@ -106,10 +155,10 @@ public class PlayerControllerWater : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
-    // Nos aseguramos de que este pulsando o no el botón de correr
+    //RUN IF SPRINT BUTTON IS PRESSED
     private void Run()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (actionRun.IsPressed())
         {
             speedMultiplier = 2f;
             isRunning = true;
@@ -123,8 +172,8 @@ public class PlayerControllerWater : MonoBehaviour
         }
     }
     
-    // Comprobacion de si está atacando
-    private void AnimationTagCheck()
+    //CHECK IF PLAYER IS ATTACKING
+    void AnimationTagCheck()
     {
         /*if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
@@ -135,40 +184,69 @@ public class PlayerControllerWater : MonoBehaviour
             isAttacking = false;
         }*/
     }
+
+    #endregion METODOS MODIFICADORES DEL MOVIMIENTO
+
+    #region EQUIPMENT
+    void CameraEquip()
+    {
+        if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == false)
+        {
+            cameraEquipped = true;
+        }
+        else if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == true)
+        {
+            cameraEquipped = false;
+        }
+        else if (moveAmmount != Vector2.zero)
+        {
+            cameraEquipped = false;
+        }
+    }
+
+    void TakePhoto()
+    {
+        if (cameraEquipped && actionAttack.WasPressedThisFrame())
+        {
+            animator.SetTrigger("CameraTakePhoto");
+        } 
+    }
+
+    void NetEquip()
+    {
+        if (actionEquipo2Net.WasPressedThisFrame())
+        {
+            netEquipped = true;
+        }
+    }
+
+    void NetLauncherEquip()
+    {
+        if (actionEquipo3NetLauncher.WasPressedThisFrame())
+        {
+            netLauncherEquipped = true;
+        }
+    }
     #endregion
 
-    #region ISGROUNDED CHECKING
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        
-    }
-
+    #region TRIGGERS COLLISIONS CHECKING
     void OnTriggerEnter2D(Collider2D trigger)
     {
-        //Detecta colision de entrada con agua
-        if (trigger.gameObject.tag == ("Water"))
-        {
-            isInWater = true;
-        }
-
-        //Detecta colision de entrada con un trigger de aire
+        //Detects if player gathers an air bubble
         if (trigger.gameObject.tag == ("AirBubble")) 
         {
             timer.currentTime += timer.addAir;
             Destroy(trigger.gameObject);
         }
 
-        //Detecta colision de entrada con un trigger de daño
+        //Detects if player takes damage
         if (trigger.gameObject.tag == ("Damage"))
         {
             timer.currentTime -= timer.depleteAir;
+            animator.SetTrigger("DamageTaken");
         }
 
-        //Detecta colision de entrada con un trigger de cambio de escena
+        //Detects if player touches a teleporter collider
         if (trigger.gameObject.tag == ("Teleporter"))
         {
             Debug.Log("TP");
@@ -178,11 +256,9 @@ public class PlayerControllerWater : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == ("Water"))
-        {
-            isInWater = false;
-        }
+        
     }
+    #endregion TRIGGERS COLLISIONS CHECKING
 
-    #endregion
+    #endregion METHODS
 }

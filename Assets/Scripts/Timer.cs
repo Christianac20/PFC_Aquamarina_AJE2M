@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
     public float currentTime; //Cantidad de aire que tiene el player actualmente
     public float addAir = 20f; //Cantidad de aire que consigue el player al tomar burbujas
     public float depleteAir = 10f; //Cantidad de aire que pierde el player al recibir daño (a futuro variaría según origen del daño)
-
     #endregion
 
     #region METHODS
@@ -57,6 +56,5 @@ public class Timer : MonoBehaviour
         //Update the UI text
         timerText.text = timeString;
     }
-    
     #endregion
 }
