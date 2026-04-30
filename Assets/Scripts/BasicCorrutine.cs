@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,14 +20,28 @@ public class BasicCorrutine : MonoBehaviour
     public float scaredVelocity; //Velocidad en la que se mueve cuendo se asusta
     public int detectVelocity; //Velocidad límite para detectar al Player
 
+
+    [SerializeField] SpriteRenderer spriteRenderer;
+    public float alfa;
+    public float alfaMax = 1f;
+    public float alfaMin = 0f;
+    public float tiempoDesaparición = 1f;
+
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        tarjectRigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        alfa = spriteRenderer.color.a;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.SetDestination(points[currentPosition].position);
+
+        animator.SetBool("Scared", scared);
+
     }
 
     void Update()
@@ -34,7 +49,7 @@ public class BasicCorrutine : MonoBehaviour
         if (scared == false)
         {
             //Cambio de posición entre puntos
-            if (!agent.pathPending && agent.remainingDistance < 0.1)
+            if (!agent.pathPending && agent.remainingDistance <= 0.1)
             {
                 currentPosition = (currentPosition + 1) % points.Length;
                 agent.SetDestination(points[currentPosition].position);
@@ -44,17 +59,16 @@ public class BasicCorrutine : MonoBehaviour
         {
             Scared();
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
        if(collision.gameObject.tag == ("Player"))
        {
-            if (detectVelocity > tarjectRigidbody.velocity.magnitude)
-            {
+          // if (detectVelocity > tarjectRigidbody.velocity.magnitude)
+          //{
                 scared = true;
-            }
+          //}
        }
     }
 
@@ -63,7 +77,11 @@ public class BasicCorrutine : MonoBehaviour
         //Huida
         distanceDifference = (transform.position - tarject.position).normalized;
         transform.Translate(distanceDifference * scaredVelocity * Time.deltaTime);
+    }
 
+    public void TriggerEvent()
+    {
+        Destroy(this.gameObject);
     }
 }
 
