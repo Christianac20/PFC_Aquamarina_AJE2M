@@ -654,8 +654,12 @@ MonoBehaviour:
   points:
   - {fileID: 2128169408}
   - {fileID: 177037302}
-  - {fileID: 0}
   tarject: {fileID: 1348644696}
+  tarjectRigidbody: {fileID: 1348644701}
+  scared: 0
+  distanceDifference: {x: 0, y: 0}
+  scaredVelocity: 1.5
+  detectVelocity: 0
 --- !u!195 &1294055638
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -718,6 +722,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2341072025962650556, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
   m_PrefabInstance: {fileID: 255202552}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1348644701 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3527153690536485563, guid: d1734220fe590694cb90a92bb7e02f3a, type: 3}
+  m_PrefabInstance: {fileID: 255202552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2036912561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -726,6 +735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 723889978230355795, guid: 8396d272f700b8845817831d3eafbb5b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 723889978230355795, guid: 8396d272f700b8845817831d3eafbb5b, type: 3}
       propertyPath: m_SortingLayer
       value: 0

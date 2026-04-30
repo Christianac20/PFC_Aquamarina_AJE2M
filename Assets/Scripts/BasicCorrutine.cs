@@ -12,13 +12,17 @@ public class BasicCorrutine : MonoBehaviour
     public Transform[] points;
     NavMeshAgent agent;
     private int currentPosition = 0;
-    public Transform tarject;
-    private bool scared = false;
-    private Vector2 distanceDifference;
+    public Transform tarject; //tarject es el Player
+    public Rigidbody2D tarjectRigidbody;
+    public bool scared = false;
+    public Vector2 distanceDifference;
+    public float scaredVelocity; //Velocidad en la que se mueve cuendo se asusta
+    public int detectVelocity; //Velocidad límite para detectar al Player
 
     // Start is called before the first frame update
     void Start()
     {
+        tarjectRigidbody = GetComponent<Rigidbody2D>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -27,30 +31,39 @@ public class BasicCorrutine : MonoBehaviour
 
     void Update()
     {
-        if (scared = false)
+        if (scared == false)
         {
+            //Cambio de posición entre puntos
             if (!agent.pathPending && agent.remainingDistance < 0.1)
             {
                 currentPosition = (currentPosition + 1) % points.Length;
                 agent.SetDestination(points[currentPosition].position);
-
             }
         }
-        Scared();
+        else
+        {
+            Scared();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
        if(collision.gameObject.tag == ("Player"))
        {
-            scared = true;
+            if (detectVelocity > tarjectRigidbody.velocity.magnitude)
+            {
+                scared = true;
+            }
        }
     }
 
     void Scared()
     {
-        distanceDifference = (transform.position - tarject.position);
-        transform.Translate(distanceDifference * Time.deltaTime);
+        //Huida
+        distanceDifference = (transform.position - tarject.position).normalized;
+        transform.Translate(distanceDifference * scaredVelocity * Time.deltaTime);
+
     }
 }
 
