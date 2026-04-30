@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FollowMouse : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class FollowMouse : MonoBehaviour
     [SerializeField] float maxSpeed = 8f;
     [SerializeField] GameObject player;
     [SerializeField] PlayerControllerWater playerControllerWater;
+
     #endregion
 
     #region METHODS
@@ -45,5 +47,6 @@ public class FollowMouse : MonoBehaviour
             playerControllerWater.Flip();
         }
     }*/ 
+
     #endregion
 }
