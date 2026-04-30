@@ -12,7 +12,7 @@ public class PlayerControllerWater : MonoBehaviour
     [Header("Variables Float")]
     public float horizontalInput;
     public float verticalInput;
-    public float speedMultiplier = 1.0f;
+    public float speedMultiplier;
     public float xSpeed = 3;
     public float ySpeed = 3;
 

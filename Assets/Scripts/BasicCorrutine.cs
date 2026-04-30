@@ -8,7 +8,7 @@ using UnityEngine.AI;
 
 public class BasicCorrutine : MonoBehaviour
 {
-    //variables
+    #region variables
     int speed;
     public Transform[] points;
     NavMeshAgent agent;
@@ -18,20 +18,24 @@ public class BasicCorrutine : MonoBehaviour
     public bool scared = false;
     public Vector2 distanceDifference;
     public float scaredVelocity; //Velocidad en la que se mueve cuendo se asusta
-    public int detectVelocity; //Velocidad límite para detectar al Player
-
-
+    public float detectVelocity; //Velocidad límite para detectar al Player
+    public PlayerControllerWater playerScript;
     [SerializeField] SpriteRenderer spriteRenderer;
-    public float alfa;
+    #endregion
+
+    #region variables no usadas
+  /*public float alfa;
     public float alfaMax = 1f;
     public float alfaMin = 0f;
-    public float tiempoDesaparición = 1f;
+    public float tiempoDesaparición = 1f;*/
+    #endregion
 
     private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        #region Ajustes Iniciales
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         alfa = spriteRenderer.color.a;
@@ -39,13 +43,17 @@ public class BasicCorrutine : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.SetDestination(points[currentPosition].position);
-
-        animator.SetBool("Scared", scared);
-
+        #endregion
     }
 
     void Update()
     {
+        #region Animator Bools And Triggers
+
+        animator.SetBool("Scared", scared);
+
+        #endregion
+
         if (scared == false)
         {
             //Cambio de posición entre puntos
@@ -65,10 +73,11 @@ public class BasicCorrutine : MonoBehaviour
     {
        if(collision.gameObject.tag == ("Player"))
        {
-          // if (detectVelocity > tarjectRigidbody.velocity.magnitude)
-          //{
+            if (detectVelocity < playerScript.speedMultiplier) //Detecta si el multiplicador de velocidad del player es mayor que su límite de detección, en tal caso, se cumple el if
+            {
+                Debug.Log("tontopolla");
                 scared = true;
-          //}
+            }
        }
     }
 
@@ -79,9 +88,8 @@ public class BasicCorrutine : MonoBehaviour
         transform.Translate(distanceDifference * scaredVelocity * Time.deltaTime);
     }
 
-    public void TriggerEvent()
+    public void TriggerEvent() //Se triggerea al final de la animación del pez huyendo
     {
         Destroy(this.gameObject);
     }
 }
-
