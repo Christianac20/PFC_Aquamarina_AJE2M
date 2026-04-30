@@ -30,7 +30,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] bool isAttacking;
     [SerializeField] bool isRunning;
     [SerializeField] bool movementY;
-    [SerializeField] bool cameraEquipped;
+    public bool cameraEquipped;
     [SerializeField] bool cameraTakePhoto;
     [SerializeField] bool netEquipped;
     [SerializeField] bool netLauncherEquipped;
@@ -47,6 +47,8 @@ public class PlayerControllerWater : MonoBehaviour
 
     [Header("Otras Variables")]
     Vector2 movement;
+    [SerializeField] GameObject cameraEquipment;
+    [SerializeField] GameObject cameraEquipmentBasePosition;
 
     //[Header("Manejo de audio")]
     //public AudioManager audioManager;
@@ -153,7 +155,7 @@ public class PlayerControllerWater : MonoBehaviour
     }
 
     //FIX PLAYER ORIENTATION
-    void Flip()
+    public void Flip()
     {
         _facingRight = !_facingRight;
 		float localScaleX = transform.localScale.x;
@@ -198,6 +200,7 @@ public class PlayerControllerWater : MonoBehaviour
     {
         if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == false)
         {
+            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
             cameraEquipped = true;
             followMouse.enabled = true;
         }
@@ -205,11 +208,13 @@ public class PlayerControllerWater : MonoBehaviour
         {
             cameraEquipped = false;
             followMouse.enabled = false;
+            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
         }
         else if (moveAmmount != Vector2.zero)
         {
             cameraEquipped = false;
             followMouse.enabled = false;
+            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
         }
     }
 
