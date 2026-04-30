@@ -38,7 +38,7 @@ public class BasicCorrutine : MonoBehaviour
         #region Ajustes Iniciales
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        alfa = spriteRenderer.color.a;
+        //alfa = spriteRenderer.color.a;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -75,7 +75,7 @@ public class BasicCorrutine : MonoBehaviour
        {
             if (detectVelocity < playerScript.speedMultiplier) //Detecta si el multiplicador de velocidad del player es mayor que su límite de detección, en tal caso, se cumple el if
             {
-                Debug.Log("tontopolla");
+                Debug.Log("tontopolla AY AY AY");
                 scared = true;
             }
        }

@@ -23,7 +23,7 @@ public class PlayerControllerWater : MonoBehaviour
 
     [Header("Variables generales")]
     [SerializeField] Vector2 moveAmmount;
-    [SerializeField] float speedMultiplier = 1.0f;
+    public float speedMultiplier = 1.0f;
     [SerializeField] float speed = 3;
 
     [Header("Variables del Animator")]
