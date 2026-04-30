@@ -210,18 +210,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 780876633936846418, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 780876633936846418, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 780876633936846418, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 6294446324980512470, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
       propertyPath: m_Name
       value: CanvasTimer
@@ -229,29 +217,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6294446324980512470, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 124418437}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
---- !u!1 &124418432 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6294446324980512470, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
-  m_PrefabInstance: {fileID: 97330294}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &124418437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124418432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 825a8166ab8d0e74ca46f2f11064094f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectIndex: 2
 --- !u!1 &128220651
 GameObject:
   m_ObjectHideFlags: 0

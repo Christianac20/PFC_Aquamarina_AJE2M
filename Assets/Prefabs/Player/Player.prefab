@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 5014397342919828187}
   - component: {fileID: 8281021878013839539}
   - component: {fileID: 2283229187007651962}
+  - component: {fileID: 4152200038884304387}
   - component: {fileID: 8672626558214603178}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: CameraPhotos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +132,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &4152200038884304387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499700879370811040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6432cf94b86eaa84b9588b741024e3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  mainCameraComponent: {fileID: 0}
+  maxSpeed: 8
+  player: {fileID: 0}
+  playerControllerWater: {fileID: 0}
 --- !u!114 &8672626558214603178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +227,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5014397342919828187}
+  - {fileID: 5022500506133678290}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9188591928737259474
@@ -347,6 +366,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  actionLook:
+    m_Name: Action Look
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 42937eba-bae3-479f-b73b-4bff2f662a0e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   actionAttack:
     m_Name: Action Attack
     m_Type: 0
@@ -392,6 +420,15 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  actionInteract:
+    m_Name: Action Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2884a071-46b2-4289-b01f-d94921623de7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   moveAmmount: {x: 0, y: 0}
   speedMultiplier: 1
   speed: 3
@@ -408,6 +445,9 @@ MonoBehaviour:
   rigidbodyPlayer: {fileID: 0}
   timer: {fileID: 7920944891700734010}
   sceneTransition: {fileID: 0}
+  followMouse: {fileID: 0}
+  cameraEquipment: {fileID: 499700879370811040}
+  cameraEquipmentBasePosition: {fileID: 7773553174102043267}
 --- !u!114 &7920944891700734010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,3 +500,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectIndex: 1
+--- !u!1 &7773553174102043267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5022500506133678290}
+  m_Layer: 0
+  m_Name: CameraSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5022500506133678290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773553174102043267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2098570872850567413}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
