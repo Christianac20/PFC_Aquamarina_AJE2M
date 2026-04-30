@@ -13,6 +13,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] InputActionAsset inputActionAsset;
 
     [SerializeField] InputAction actionMove;
+    [SerializeField] InputAction actionLook;
     [SerializeField] InputAction actionAttack;
     [SerializeField] InputAction actionRun;
     [SerializeField] InputAction actionEquipo1Camera;
@@ -42,6 +43,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
     [SerializeField] SceneTransition sceneTransition;
+    [SerializeField] FollowMouse followMouse;
 
     [Header("Otras Variables")]
     Vector2 movement;
@@ -56,6 +58,7 @@ public class PlayerControllerWater : MonoBehaviour
     {
         //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
         actionMove = InputSystem.actions.FindAction("Move");
+        actionLook = InputSystem.actions.FindAction("Look");
         actionRun = InputSystem.actions.FindAction("Run");
         actionAttack = InputSystem.actions.FindAction("Attack");
         actionEquipo1Camera = InputSystem.actions.FindAction("Equipo1_Camera");
@@ -70,6 +73,7 @@ public class PlayerControllerWater : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
         animator = GetComponent<Animator>();
+        followMouse = GetComponentInChildren<FollowMouse>();
     }
 
     void Update()
@@ -195,14 +199,17 @@ public class PlayerControllerWater : MonoBehaviour
         if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == false)
         {
             cameraEquipped = true;
+            followMouse.enabled = true;
         }
         else if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == true)
         {
             cameraEquipped = false;
+            followMouse.enabled = false;
         }
         else if (moveAmmount != Vector2.zero)
         {
             cameraEquipped = false;
+            followMouse.enabled = false;
         }
     }
 
@@ -254,11 +261,6 @@ public class PlayerControllerWater : MonoBehaviour
             Debug.Log("TP");
             sceneTransition.SceneChange();
         }
-    }
-
-    void OnTriggerExit2D(Collider2D trigger)
-    {
-        
     }
     #endregion TRIGGERS COLLISIONS CHECKING
 
