@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthBarUI : MonoBehaviour
 {
     [Header("Referencia al jugador")]
-    public PlayerHealth playerHealth;
+    public Timer playerHealth;
 
     [Header("Sprites de la barra de vida")]
     //[SerializeField] private Sprite[] healthBarSprites; // Array de 7 sprites (0% a 100%)
@@ -16,13 +16,13 @@ public class HealthBarUI : MonoBehaviour
     void Start()
     {
         // Validaciones
-
+    /*
         if (spritesHealthBar == null || spritesHealthBar.Length != 7)
         {
             Debug.LogError("Debes asignar exactamente 7 sprites en el array");
             return;
         }
-
+        */
         /*
         // Suscribirse al evento de cambio de vida
         playerHealth.OnHealthChanged.AddListener(UpdateHealthBar);
@@ -31,36 +31,44 @@ public class HealthBarUI : MonoBehaviour
         UpdateHealthBar(playerHealth.GetCurrentHealth());
         */
     }
-
+    
     private void Update()
     {
-        switch (playerHealth.currentHealth)
+        if (playerHealth.currentTime < 120f)
         {
-            case 6:
-                healthBarImage.sprite = spritesHealthBar[6];
+            healthBarImage.sprite = spritesHealthBar[21];
+        }
+        else if(playerHealth.currentTime < 100)
+        {
+            healthBarImage.sprite = spritesHealthBar[10];
+        }
+
+        /* switch (playerHealth.currentTime)
+        {
+            case 120f:
+                healthBarImage.sprite = spritesHealthBar[21];
                 break;
-            case 5:
+            case 100f:
+                healthBarImage.sprite = spritesHealthBar[17];
+                break;
+            case 80f:
+                healthBarImage.sprite = spritesHealthBar[14];
+                break;
+            case 60f:
+                healthBarImage.sprite = spritesHealthBar[11];
+                break;
+            case 40f:
+                healthBarImage.sprite = spritesHealthBar[8];
+                break;
+            case 20f:
                 healthBarImage.sprite = spritesHealthBar[5];
                 break;
-            case 4:
-                healthBarImage.sprite = spritesHealthBar[4];
-                break;
-            case 3:
-                healthBarImage.sprite = spritesHealthBar[3];
-                break;
-            case 2:
-                healthBarImage.sprite = spritesHealthBar[2];
-                break;
-            case 1:
-                healthBarImage.sprite = spritesHealthBar[1];
-                break;
-            case 0:
+            case 0f:
                 healthBarImage.sprite = spritesHealthBar[0];
                 break;
-            default:
-                print("esto ta roto eh");
-                break;
+          
         }
+        */
     }
 
     /* Metodos legacy
