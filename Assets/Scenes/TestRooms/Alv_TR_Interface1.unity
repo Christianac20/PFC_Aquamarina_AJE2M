@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300391704141812986, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294446324980512470, guid: 43c1963a2e285ce43ad705038adc2913, type: 3}
       propertyPath: m_Name
       value: CanvasTimer
