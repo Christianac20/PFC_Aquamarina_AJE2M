@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class PlayerControllerGround : MonoBehaviour
+public class PlayerController_Ground : MonoBehaviour
 {
     #region VARIABLES
     // Variables Float
@@ -28,13 +28,13 @@ public class PlayerControllerGround : MonoBehaviour
 
     //Variables de Componente
     [Header("Variables de Componente")]
-    public SpriteRenderer spriteRenderer;
-    //public Animator animator;
-    public Rigidbody2D rigidbodyPlayer;
+    public SpriteRenderer spriteRenderer; // Compartida
+    public Animator animator;
+    public Rigidbody2D rigidbodyPlayer; // Compartida
 
     //Variables Compuestas
     [Header("Variables compuestas")]
-    Vector2 movement;
+    Vector2 movement; // Compartida
 
     //Manejo de audio
     //public AudioManager audioManager;
@@ -43,8 +43,8 @@ public class PlayerControllerGround : MonoBehaviour
     void Awake() //Usado para guardar componentes al iniciar
     {
         #region GUARDAR REFERENCIAS
-        rigidbodyPlayer = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        rigidbodyPlayer = GetComponent<Rigidbody2D>(); // Compartida
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Compartida
         //animator = GetComponent<Animator>();
         #endregion
     }
@@ -76,15 +76,13 @@ public class PlayerControllerGround : MonoBehaviour
 
 
         // Llamo a las funciones modificadoras del movimiento
-        AnimationTagCheck();
-        Run();
         AdaptGravity();
         #endregion
 
         #region ANIMATOR VARIABLES SET
         /*
         // Asigno variables a parametros del animator
-        animator.SetBool("Idle", movement == Vector2.zero);
+        animator.SetBool("Idle", movement == Vector2.zero); // Compartida
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetBool("IsRunning", isRunning);
         */
@@ -114,34 +112,6 @@ public class PlayerControllerGround : MonoBehaviour
             rigidbodyPlayer.gravityScale = gravityWater;
         }
     }
-
-    // Nos aseguramos de que este pulsando o no el botón de correr
-    private void Run()
-    {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speedMultiplier = 2f;
-            isRunning = true;
-        }
-        else
-        {
-            speedMultiplier = 1.0f;
-            isRunning = false;
-        }
-    }
-    
-    // Comprobacion de si está atacando
-    private void AnimationTagCheck()
-    {
-        /*if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            isAttacking = true;
-        }
-        else
-        {
-            isAttacking = false;
-        }*/
-    }
     #endregion
 
     #region ISGROUNDED CHECKING
@@ -153,6 +123,13 @@ public class PlayerControllerGround : MonoBehaviour
             isGrounded = true;
         }
     }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
+        {
+            isGrounded = false;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     { 
@@ -162,13 +139,6 @@ public class PlayerControllerGround : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = false;
-        }
-    }
 
     void OnTriggerExit2D(Collider2D collision)
     {
@@ -177,6 +147,5 @@ public class PlayerControllerGround : MonoBehaviour
             isInWater = false;
         }
     }
-
-    #endregion 
+    #endregion ISGROUNDED CHECKING
 }

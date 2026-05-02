@@ -8,12 +8,13 @@ public class SceneTransition : MonoBehaviour
     #region VARIABLES
     Animator canvasAnimator;
     public string scene;
+
     [SerializeField] AnimationClip animacionFinal;
     [SerializeField] GameObject player;
     [SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
     [SerializeField] PlayerControllerWater playerControllerWater;
-    [SerializeField] PlayerControllerGround playerControllerGround;
+    [SerializeField] PlayerController_Ground playerControllerGround;
 
     #endregion
 
@@ -25,18 +26,13 @@ public class SceneTransition : MonoBehaviour
         canvasAnimator = canvasFades.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         playerControllerWater = FindObjectOfType<PlayerControllerWater>();
-        playerControllerGround = FindObjectOfType<PlayerControllerGround>();
+        playerControllerGround = FindObjectOfType<PlayerController_Ground>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*//Cambio de escena por tecla. Test Inicial. Deprecated
-        if (Input.GetKeyUp(KeyCode.T))
-        {
-            StartCoroutine(ChangeScene());
-        }
-        */
+
     }
 
     public void SceneChange()
