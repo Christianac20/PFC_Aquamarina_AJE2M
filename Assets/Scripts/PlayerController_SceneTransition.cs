@@ -9,8 +9,8 @@ public class SceneTransition : MonoBehaviour
     Animator canvasAnimator;
 
     [SerializeField] AnimationClip animacionFinal;
-    [SerializeField] GameObject player; // SOLO TA EN ESTE
-    [SerializeField] GameObject playerPositionOnEnter;
+    [SerializeField] GameObject player;
+    //[SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
     [SerializeField] PlayerControllerWater playerControllerWater;
     [SerializeField] PlayerController_Ground playerControllerGround;
@@ -60,8 +60,8 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(playerController_Triggers.scene);
 
         //muevo al player al punto de la pantalla en que quiero que aparezca
-        playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
-        player.transform.position = playerPositionOnEnter.transform.position;
+        //playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
+        player.transform.position = playerController_Triggers.playerPositionOnEnter.transform.position;
 
         //Reactivo los controles del player
         if (playerControllerWater != null)

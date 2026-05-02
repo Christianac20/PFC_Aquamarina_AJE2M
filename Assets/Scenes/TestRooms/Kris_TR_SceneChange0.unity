@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 4215279755790870724}
   - component: {fileID: 4642293828638470941}
   m_Layer: 0
-  m_Name: TP Scene 1
+  m_Name: TP Scene 1L
   m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,13 +1129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bad6676fced3624b924cd9e1e4010fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 1
   animacionFinal: {fileID: 7400000, guid: e0de8ced1fa16b94395025d58caddb10, type: 2}
   player: {fileID: 0}
   playerPositionOnEnter: {fileID: 0}
   canvasFades: {fileID: 0}
   playerControllerWater: {fileID: 0}
   playerControllerGround: {fileID: 0}
+  playerController_Triggers: {fileID: 0}
 --- !u!212 &5594219563877529508
 SpriteRenderer:
   m_ObjectHideFlags: 0
