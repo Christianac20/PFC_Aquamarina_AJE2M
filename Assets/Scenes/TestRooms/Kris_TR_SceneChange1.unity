@@ -2382,6 +2382,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7269162332515678563, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
+      propertyPath: bleh.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269162332515678563, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
       propertyPath: playerPositionsArrayOnEnter.Array.data[0]
       value: 
       objectReference: {fileID: 1698475194}

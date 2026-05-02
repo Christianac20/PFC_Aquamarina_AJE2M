@@ -85,11 +85,10 @@ public class PlayerController_Triggers : MonoBehaviour
                     break;
             }
 
-            Debug.Log("TP to scene en Script Triggers: " + scene);
             sceneTransition.SceneChange();
         }
     }
-    #endregion TRIGGERS COLLISIONS CHECKING
+        #endregion TRIGGERS COLLISIONS CHECKING
 
-    #endregion METHODS
+        #endregion METHODS
 }

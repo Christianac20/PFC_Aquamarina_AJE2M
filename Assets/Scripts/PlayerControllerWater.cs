@@ -18,7 +18,7 @@ public class PlayerControllerWater : MonoBehaviour
     InputAction actionInteract;
 
     [Header("Variables generales")]
-    [SerializeField] Vector2 moveAmmount;
+    public Vector2 moveAmmount;
     public float speedMultiplier = 1.0f;
     [SerializeField] float speed = 3;
 
