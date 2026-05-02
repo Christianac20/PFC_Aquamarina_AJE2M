@@ -10,21 +10,21 @@ public class PlayerControllerGround : MonoBehaviour
     #region VARIABLES
     // Variables Float
     [Header("Variables Float")]
-    public float horizontalInput;
-    public float verticalInput;
-    public float speedMultiplier = 1.0f;
-    public float xSpeed = 3;
-    public float ySpeed = 3;
+    public float horizontalInput; // Compartida -Input System
+    public float verticalInput; // Compartida -Input System
+    public float speedMultiplier = 1.0f; // Compartida
+    public float xSpeed = 3; // Compartida
+    public float ySpeed = 3; // Compartida
     public float gravityWater = 0f;
     public float gravityBase = 1f;
 
     // Variables Animator
     [Header("Variables del Animator")]
-    bool isAttacking;
-    public bool isGrounded;
-    public bool isInWater;
-    bool isRunning;
-    private bool _facingRight = true;
+    bool isAttacking; // Compartida
+    public bool isGrounded; 
+    public bool isInWater; 
+    bool isRunning; // Compartida
+    bool _facingRight = true; // Compartida
 
     //Variables de Componente
     [Header("Variables de Componente")]

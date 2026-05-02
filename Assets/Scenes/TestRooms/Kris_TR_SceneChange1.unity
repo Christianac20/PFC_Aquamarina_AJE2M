@@ -1544,7 +1544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667276329969014113, guid: 40bb42437139f8446b1c251bd0e11787, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5272895071707018107, guid: 40bb42437139f8446b1c251bd0e11787, type: 3}
       propertyPath: m_Name
@@ -1753,6 +1753,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1625878892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1454644744081574198, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
+  m_PrefabInstance: {fileID: 4983988686100551590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681806774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,6 +2609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773553174102043267, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
+      propertyPath: m_TagString
+      value: CameraPhotosBasePoint
+      objectReference: {fileID: 0}
     - target: {fileID: 7920944891700734010, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
       propertyPath: timerText
       value: 
@@ -2611,13 +2620,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1454644744081574198, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 4983988686100551600}
   m_SourcePrefab: {fileID: 100100000, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
 --- !u!4 &4983988686100551591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2098570872850567413, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
   m_PrefabInstance: {fileID: 4983988686100551590}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4983988686100551600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625878892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af56d54d6dabfb34e95862bddffaa19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
+  moveAmmount: {x: 0, y: 0}
+  cameraEquipped: 0
+  cameraTakePhoto: 0
+  netEquipped: 0
+  netLauncherEquipped: 0
+  followMouse: {fileID: 0}
+  animator: {fileID: 0}
+  cameraEquipment: {fileID: 0}
+  cameraEquipmentBasePosition: {fileID: 0}
 --- !u!1 &5272895070764082132
 GameObject:
   m_ObjectHideFlags: 0
