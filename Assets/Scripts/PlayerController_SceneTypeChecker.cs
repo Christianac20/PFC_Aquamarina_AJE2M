@@ -7,7 +7,7 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
 {
     #region VARIABLES
     //Comprobaciones de Ground/Water para desactivar controles segun tipo de nivel
-    [SerializeField] bool currentSceneIsGrounded;
+    public bool currentSceneIsGrounded;
     [SerializeField] int sceneIndex;
     [SerializeField] Scene currentScene;
 
@@ -28,6 +28,7 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         currentScene = SceneManager.GetActiveScene(); //Obtiene la escena actual
         sceneIndex = currentScene.buildIndex; //Obtiene el indice de la escena actual (0 es la terrestre)
 
@@ -43,6 +44,7 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
             //playerControllerGround.enabled = false; //Desactiva el script de control terrestre
             playerControllerWater.enabled = true; //Activa el script de control acuático
         }
+        */
     }
     #endregion
 }

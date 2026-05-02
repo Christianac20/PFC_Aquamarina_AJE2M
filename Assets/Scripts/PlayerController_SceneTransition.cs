@@ -7,7 +7,7 @@ public class SceneTransition : MonoBehaviour
 {
     #region VARIABLES
     Animator canvasAnimator;
-    public string scene;
+    [SerializeField] string scene;
 
     [SerializeField] AnimationClip animacionFinal;
     [SerializeField] GameObject player;
