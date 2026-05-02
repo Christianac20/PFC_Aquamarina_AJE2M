@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 1370169107}
   - component: {fileID: 1370169111}
   m_Layer: 0
-  m_Name: TP
+  m_Name: TP Scene 1
   m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bad6676fced3624b924cd9e1e4010fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Kris_TR_SceneChange1
+  scene: 1
   animacionFinal: {fileID: 7400000, guid: e0de8ced1fa16b94395025d58caddb10, type: 2}
   player: {fileID: 0}
   playerPositionOnEnter: {fileID: 0}

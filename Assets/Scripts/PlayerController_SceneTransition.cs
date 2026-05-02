@@ -7,14 +7,14 @@ public class SceneTransition : MonoBehaviour
 {
     #region VARIABLES
     Animator canvasAnimator;
-    [SerializeField] string scene;
 
     [SerializeField] AnimationClip animacionFinal;
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player; // SOLO TA EN ESTE
     [SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
     [SerializeField] PlayerControllerWater playerControllerWater;
     [SerializeField] PlayerController_Ground playerControllerGround;
+    [SerializeField] PlayerController_Triggers playerController_Triggers;
 
     #endregion
 
@@ -27,6 +27,7 @@ public class SceneTransition : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerControllerWater = FindObjectOfType<PlayerControllerWater>();
         playerControllerGround = FindObjectOfType<PlayerController_Ground>();
+        playerController_Triggers = FindObjectOfType<PlayerController_Triggers>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,8 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
+        Debug.Log("Inicio Corrutina: " + playerController_Triggers.scene); //Debug para error de transicion de escenas. Eliminar
+
         canvasAnimator.SetTrigger("Iniciar");
 
         //Desactivo los controles del player
@@ -54,10 +57,9 @@ public class SceneTransition : MonoBehaviour
             playerControllerGround.enabled = false;
         }
 
-
         yield return new WaitForSeconds(animacionFinal.length);
 
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(playerController_Triggers.scene);
 
         //muevo al player al punto de la pantalla en que quiero que aparezca
         playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");

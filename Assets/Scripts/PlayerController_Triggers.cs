@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController_Triggers : MonoBehaviour
 {
     #region VARIABLES
+    public int scene;
+
     [Header("Variables de Componente y Scripts")]
     [SerializeField] Timer timer;
     [SerializeField] Animator animator;
@@ -51,11 +54,30 @@ public class PlayerController_Triggers : MonoBehaviour
         //Detects if player touches a teleporter collider
         if (trigger.gameObject.tag == ("Teleporter"))
         {
-            Debug.Log("TP");
+            switch (trigger.name)
+            {
+                case "TP Scene 0":
+                    scene = 0;
+                    break;
+                case "TP Scene 1":
+                    scene = 1;
+                    break;
+                case "TP Scene 2":
+                    scene = 2;
+                    break;
+                case "TP Scene 3":
+                    scene = 3;
+                    break;
+                case "TP Scene 4":
+                    scene = 4;
+                    break;
+            }
+
+            Debug.Log("TP to scene en Script Triggers: " + scene); //Eliminado mientras parcheo de bug de TP
             sceneTransition.SceneChange();
         }
     }
     #endregion TRIGGERS COLLISIONS CHECKING
 
-#endregion METHODS
+    #endregion METHODS
 }
