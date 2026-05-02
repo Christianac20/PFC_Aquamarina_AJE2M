@@ -73,7 +73,7 @@ public class PlayerController_Triggers : MonoBehaviour
                     break;
             }
 
-            Debug.Log("TP to scene en Script Triggers: " + scene); //Eliminado mientras parcheo de bug de TP
+            Debug.Log("TP to scene en Script Triggers: " + scene);
             sceneTransition.SceneChange();
         }
     }

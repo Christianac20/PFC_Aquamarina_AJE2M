@@ -43,8 +43,6 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        Debug.Log("Inicio Corrutina: " + playerController_Triggers.scene); //Debug para error de transicion de escenas. Eliminar
-
         canvasAnimator.SetTrigger("Iniciar");
 
         //Desactivo los controles del player
