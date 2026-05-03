@@ -2276,9 +2276,25 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 4983988686100551591}
+    - target: {fileID: 4915839336000211280, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2222223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915839336000211280, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5745639
+      objectReference: {fileID: 0}
     - target: {fileID: 5147383132952191543, guid: d26209210252048418c68203a9719639, type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692693459589832777, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8690615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692693459589832777, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5745643
       objectReference: {fileID: 0}
     - target: {fileID: 5904942823582840995, guid: d26209210252048418c68203a9719639, type: 3}
       propertyPath: m_LocalPosition.x

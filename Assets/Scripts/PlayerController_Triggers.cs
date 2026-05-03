@@ -11,8 +11,10 @@ public class PlayerController_Triggers : MonoBehaviour
     [Header("Variables de Componente y Scripts")]
     [SerializeField] Timer timer;
     [SerializeField] Animator animator;
+    [SerializeField] Animator bubblesDamageAnimator;
     [SerializeField] SceneTransition sceneTransition;
 
+    [SerializeField] GameObject bubblesDamage;
     public GameObject playerPositionOnEnter;
     [SerializeField] GameObject[] playerPositionsArrayOnEnter;
 
@@ -52,6 +54,7 @@ public class PlayerController_Triggers : MonoBehaviour
         {
             timer.currentTime -= timer.depleteAir;
             animator.SetTrigger("DamageTaken");
+            bubblesDamageAnimator.SetTrigger("Damage");
         }
 
         //Detects if player touches a teleporter collider
@@ -88,7 +91,6 @@ public class PlayerController_Triggers : MonoBehaviour
             sceneTransition.SceneChange();
         }
     }
-        #endregion TRIGGERS COLLISIONS CHECKING
-
-        #endregion METHODS
+    #endregion TRIGGERS COLLISIONS CHECKING
+    #endregion METHODS
 }
