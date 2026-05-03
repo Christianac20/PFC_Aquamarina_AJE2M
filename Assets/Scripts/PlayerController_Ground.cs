@@ -27,6 +27,7 @@ public class PlayerController_Ground : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
+    [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
 
     //Manejo de audio
     //public AudioManager audioManager;
@@ -40,6 +41,7 @@ public class PlayerController_Ground : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>(); // Compartida
         animator = GetComponent<Animator>();
         timer = GetComponent<Timer>();
+        sceneTypeChecker = GetComponent<PlayerController_SceneTypeChecker>();
     }
 
     void Update()
@@ -47,11 +49,11 @@ public class PlayerController_Ground : MonoBehaviour
         //Movement vector
         moveAmmount = actionMove.ReadValue<Vector2>();
 
-        //CHECKING IF PLAYER DIED
-        CheckDeath();
+        //Checking if gravity is right for the level type
+        CheckGravity();
 
         //CHECKING IF GRAVITY IS RIGHT FOR THE LEVEL TYPE
-        CheckGravity();
+        CheckAir();
 
         //ANIMATOR VARIABLES SETTINGS
         animator.SetBool("Idle", moveAmmount == Vector2.zero);
@@ -62,22 +64,23 @@ public class PlayerController_Ground : MonoBehaviour
         Walking();
     }
 
-    void CheckDeath()
+    void CheckGravity()
     {
-        if (timer.currentTime <= 0)
+        if (rigidbodyPlayer.gravityScale != sceneTypeChecker.gravityGround)
         {
-            animator.SetTrigger("Death");
-            this.enabled = false;
+            rigidbodyPlayer.gravityScale = sceneTypeChecker.gravityGround;
         }
     }
 
-    void CheckGravity()
+    void CheckAir()
     {
-        if (rigidbodyPlayer.gravityScale != 1f)
+        if (timer.currentTime != timer.totalTime)
         {
-            rigidbodyPlayer.gravityScale = 1f;
+            timer.timeDecreaseSpeed = 0;
+            timer.currentTime = timer.totalTime;
         }
     }
+
 
     #region MOVIMIENTO
     //MAIN BASIC MOVEMENT

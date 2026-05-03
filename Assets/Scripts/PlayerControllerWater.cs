@@ -33,6 +33,7 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
     [SerializeField] FollowMouse followMouse;
+    [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
 
     //[Header("Manejo de audio")]
     //public AudioManager audioManager;
@@ -52,7 +53,7 @@ public class PlayerControllerWater : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         timer = GetComponent<Timer>();
         animator = GetComponent<Animator>();
-        //followMouse = GetComponentInChildren<FollowMouse>();
+        sceneTypeChecker = GetComponent<PlayerController_SceneTypeChecker>();
     }
 
     void Update()
@@ -101,9 +102,9 @@ public class PlayerControllerWater : MonoBehaviour
 
     void CheckGravity()
     {
-        if (rigidbodyPlayer.gravityScale != 0.005f)
+        if (rigidbodyPlayer.gravityScale != sceneTypeChecker.gravityWater)
         {
-            rigidbodyPlayer.gravityScale = 0.005f;
+            rigidbodyPlayer.gravityScale = sceneTypeChecker.gravityWater;
         }
     }
     

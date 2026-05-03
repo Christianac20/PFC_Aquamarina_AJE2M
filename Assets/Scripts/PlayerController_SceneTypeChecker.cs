@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class PlayerController_SceneTypeChecker : MonoBehaviour
 {
     #region VARIABLES
+    //Valores de gravedad según el tipo de nivel
+    public float gravityWater = 0.005f;
+    public float gravityGround = 1f;
+
     //Comprobaciones de Ground/Water para desactivar controles segun tipo de nivel
     public bool currentSceneIsGrounded;
     [SerializeField] int sceneIndex;
