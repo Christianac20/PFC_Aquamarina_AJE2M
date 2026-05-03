@@ -510,9 +510,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TP Scene 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4642293829308236119, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
-      propertyPath: scene
-      value: 2
+    - target: {fileID: 4215279756193782414, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
+      propertyPath: m_Offset.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161348140883562666, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1377,17 +1377,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: TP Scene 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4215279756193782414, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
-      propertyPath: m_Offset.x
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 7161348140883562666, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.376
       objectReference: {fileID: 0}
     - target: {fileID: 7161348140883562666, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.012503684
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7161348140883562666, guid: 469f4469938070b47ae445a0af9c4f30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2263,10 +2259,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPositions
       objectReference: {fileID: 0}
-    - target: {fileID: 3372516285052596634, guid: 17eccbc3c9409e349bee77cee9fed27d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.55
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2409,14 +2401,6 @@ PrefabInstance:
       propertyPath: playerPositionsArrayOnEnter.Array.data[5]
       value: 
       objectReference: {fileID: 196557508}
-    - target: {fileID: 7737499367827128783, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7737499367827128783, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
-      propertyPath: m_Size.y
-      value: 1.29
-      objectReference: {fileID: 0}
     - target: {fileID: 7920944891700734010, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
       propertyPath: timerText
       value: 

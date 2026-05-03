@@ -26,13 +26,11 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] bool isAttacking;
     [SerializeField] bool isRunning;
     [SerializeField] bool movementY;
-    bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
-    [SerializeField] FollowMouse followMouse;
     [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
 
     //[Header("Manejo de audio")]
@@ -118,11 +116,11 @@ public class PlayerControllerWater : MonoBehaviour
             rigidbodyPlayer.velocity = new Vector2(moveAmmount.x * speed * speedMultiplier, moveAmmount.y * speed * speedMultiplier);
 
             //FLIP PLAYER
-            if (moveAmmount.x < 0f && _facingRight == true)
+            if (moveAmmount.x < 0f && sceneTypeChecker.facingRight == true)
             {
                 Flip();
             }
-            else if (moveAmmount.x > 0f && _facingRight == false)
+            else if (moveAmmount.x > 0f && sceneTypeChecker.facingRight == false)
             {
                 Flip();
             }
@@ -132,7 +130,7 @@ public class PlayerControllerWater : MonoBehaviour
     //FIX PLAYER ORIENTATION
     public void Flip()
     {
-        _facingRight = !_facingRight;
+        sceneTypeChecker.facingRight = !sceneTypeChecker.facingRight;
 		float localScaleX = transform.localScale.x;
 		localScaleX = localScaleX * -1f;
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);

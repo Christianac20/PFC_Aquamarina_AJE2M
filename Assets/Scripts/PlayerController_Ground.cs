@@ -21,7 +21,6 @@ public class PlayerController_Ground : MonoBehaviour
     // Variables Animator
     [Header("Variables del Animator")]
     bool isAttacking;
-    bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
     [SerializeField] Animator animator;
@@ -91,11 +90,11 @@ public class PlayerController_Ground : MonoBehaviour
             rigidbodyPlayer.velocity = new Vector2(moveAmmount.x * speed, 0);
 
             //FLIP PLAYER
-            if (moveAmmount.x < 0f && _facingRight == true)
+            if (moveAmmount.x < 0f && sceneTypeChecker.facingRight == true)
             {
                 Flip();
             }
-            else if (moveAmmount.x > 0f && _facingRight == false)
+            else if (moveAmmount.x > 0f && sceneTypeChecker.facingRight == false)
             {
                 Flip();
             }
@@ -105,7 +104,7 @@ public class PlayerController_Ground : MonoBehaviour
     //FIX PLAYER ORIENTATION
     public void Flip()
     {
-        _facingRight = !_facingRight;
+        sceneTypeChecker.facingRight =! sceneTypeChecker.facingRight;
         float localScaleX = transform.localScale.x;
         localScaleX = localScaleX * -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);

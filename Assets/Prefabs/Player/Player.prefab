@@ -319,7 +319,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.011065125}
-  m_Size: {x: 0.411479, y: 1.3159051}
+  m_Size: {x: 0.4, y: 1.29}
   m_Direction: 0
 --- !u!50 &5260413005651079804
 Rigidbody2D:
@@ -360,6 +360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365021325c49d3843bc49f7c4df39eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityWater: 0.005
+  gravityGround: 1
   currentSceneIsGrounded: 0
   sceneIndex: 0
   currentScene:
@@ -393,7 +395,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   rigidbodyPlayer: {fileID: 0}
   timer: {fileID: 7920944891700734010}
-  followMouse: {fileID: 0}
+  sceneTypeChecker: {fileID: 0}
 --- !u!114 &217133733573458813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,6 +414,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   rigidbodyPlayer: {fileID: 0}
   timer: {fileID: 0}
+  sceneTypeChecker: {fileID: 0}
 --- !u!114 &6807518153193870056
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
     public float gravityWater = 0.005f;
     public float gravityGround = 1f;
 
+    //Para Flipear el player
+    public bool facingRight = false;
+
     //Comprobaciones de Ground/Water para desactivar controles segun tipo de nivel
     public bool currentSceneIsGrounded;
     [SerializeField] int sceneIndex;
