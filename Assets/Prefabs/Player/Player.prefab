@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   mainCameraComponent: {fileID: 0}
-  maxSpeed: 8
+  maxSpeed: 10
   player: {fileID: 0}
   playerControllerWater: {fileID: 0}
 --- !u!114 &8672626558214603178
@@ -202,7 +202,11 @@ GameObject:
   - component: {fileID: 9188591928737259474}
   - component: {fileID: 7737499367827128783}
   - component: {fileID: 5260413005651079804}
+  - component: {fileID: 2590989497295030318}
   - component: {fileID: 2223255431538443812}
+  - component: {fileID: 217133733573458813}
+  - component: {fileID: 6807518153193870056}
+  - component: {fileID: 7269162332515678563}
   - component: {fileID: 7920944891700734010}
   - component: {fileID: 3597490466662552891}
   - component: {fileID: 8064327675050168116}
@@ -315,7 +319,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.011065125}
-  m_Size: {x: 0.411479, y: 1.3159051}
+  m_Size: {x: 0.4, y: 1.29}
   m_Direction: 0
 --- !u!50 &5260413005651079804
 Rigidbody2D:
@@ -344,6 +348,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2590989497295030318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365021325c49d3843bc49f7c4df39eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityWater: 0.005
+  gravityGround: 1
+  currentSceneIsGrounded: 0
+  sceneIndex: 0
+  currentScene:
+    m_Handle: 0
+  animator: {fileID: 0}
+  playerControllerWater: {fileID: 0}
+  playerControllerEquipment: {fileID: 0}
+  playerControllerGround: {fileID: 0}
+  animatorControllers:
+  - {fileID: 9100000, guid: 585f3a4c572447048bb64a48418fc8ec, type: 2}
+  - {fileID: 9100000, guid: 50adb01a5c60a1b4bb1c43fb45f906b3, type: 2}
 --- !u!114 &2223255431538443812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,97 +386,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionAsset: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
-  actionMove:
-    m_Name: Action Move
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 581a8b44-9797-46d5-8b79-b1ca318b5518
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionLook:
-    m_Name: Action Look
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 42937eba-bae3-479f-b73b-4bff2f662a0e
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionAttack:
-    m_Name: Action Attack
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 7baa7ca5-19c8-4fd0-83a3-7610bf444fb0
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionRun:
-    m_Name: Action Run
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: ec843e85-9bbe-4fc5-903a-ab7703cf84cf
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionEquipo1Camera:
-    m_Name: Action Equipo 1 Camera
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f1c6c55c-a85a-4526-893e-f8605a004aa0
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionEquipo2Net:
-    m_Name: Action Equipo 2 Net
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6a93e40b-5deb-4434-a300-285d3c06eaa1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionEquipo3NetLauncher:
-    m_Name: Action Equipo 3 Net Launcher
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a41b1c62-8897-4d80-be58-9be9169c4913
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  actionInteract:
-    m_Name: Action Interact
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 2884a071-46b2-4289-b01f-d94921623de7
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   moveAmmount: {x: 0, y: 0}
   speedMultiplier: 1
   speed: 3
   isAttacking: 0
   isRunning: 0
   movementY: 0
+  animator: {fileID: 0}
+  rigidbodyPlayer: {fileID: 0}
+  timer: {fileID: 7920944891700734010}
+  sceneTypeChecker: {fileID: 0}
+--- !u!114 &217133733573458813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65f76bfccc137c46bad04a6d82c43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
+  moveAmmount: {x: 0, y: 0}
+  speed: 3
+  animator: {fileID: 0}
+  rigidbodyPlayer: {fileID: 0}
+  timer: {fileID: 0}
+  sceneTypeChecker: {fileID: 0}
+--- !u!114 &6807518153193870056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af56d54d6dabfb34e95862bddffaa19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
+  moveAmmount: {x: 0, y: 0}
   cameraEquipped: 0
   cameraTakePhoto: 0
   netEquipped: 0
   netLauncherEquipped: 0
-  playerControllerWater: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  animator: {fileID: 0}
-  rigidbodyPlayer: {fileID: 0}
-  timer: {fileID: 7920944891700734010}
-  sceneTransition: {fileID: 0}
   followMouse: {fileID: 0}
-  cameraEquipment: {fileID: 499700879370811040}
-  cameraEquipmentBasePosition: {fileID: 7773553174102043267}
+  animator: {fileID: 0}
+  playerControllerWater: {fileID: 0}
+  cameraEquipment: {fileID: 0}
+  cameraEquipmentBasePosition: {fileID: 0}
+--- !u!114 &7269162332515678563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae1b7f2b0893a14ba9837d1700a3f5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: 0
+  timer: {fileID: 0}
+  animator: {fileID: 0}
+  sceneTransition: {fileID: 0}
+  playerPositionOnEnter: {fileID: 0}
+  playerPositionsArrayOnEnter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &7920944891700734010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +525,7 @@ GameObject:
   - component: {fileID: 5022500506133678290}
   m_Layer: 0
   m_Name: CameraSpawnPoint
-  m_TagString: Untagged
+  m_TagString: CameraPhotosBasePoint
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,7 +8,7 @@ public class FollowMouse : MonoBehaviour
     #region VARIABLES
     [SerializeField] GameObject mainCamera;
     [SerializeField] Camera mainCameraComponent;
-    [SerializeField] float maxSpeed = 8f;
+    [SerializeField] float maxSpeed = 10f;
     [SerializeField] GameObject player;
     [SerializeField] PlayerControllerWater playerControllerWater;
 

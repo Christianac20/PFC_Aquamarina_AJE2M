@@ -7,13 +7,14 @@ public class SceneTransition : MonoBehaviour
 {
     #region VARIABLES
     Animator canvasAnimator;
-    public string scene;
+
     [SerializeField] AnimationClip animacionFinal;
     [SerializeField] GameObject player;
-    [SerializeField] GameObject playerPositionOnEnter;
+    //[SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
     [SerializeField] PlayerControllerWater playerControllerWater;
-    [SerializeField] PlayerControllerGround playerControllerGround;
+    [SerializeField] PlayerController_Ground playerControllerGround;
+    [SerializeField] PlayerController_Triggers playerController_Triggers;
 
     #endregion
 
@@ -25,18 +26,14 @@ public class SceneTransition : MonoBehaviour
         canvasAnimator = canvasFades.GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
         playerControllerWater = FindObjectOfType<PlayerControllerWater>();
-        playerControllerGround = FindObjectOfType<PlayerControllerGround>();
+        playerControllerGround = FindObjectOfType<PlayerController_Ground>();
+        playerController_Triggers = FindObjectOfType<PlayerController_Triggers>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*//Cambio de escena por tecla. Test Inicial. Deprecated
-        if (Input.GetKeyUp(KeyCode.T))
-        {
-            StartCoroutine(ChangeScene());
-        }
-        */
+
     }
 
     public void SceneChange()
@@ -58,14 +55,13 @@ public class SceneTransition : MonoBehaviour
             playerControllerGround.enabled = false;
         }
 
-
         yield return new WaitForSeconds(animacionFinal.length);
 
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(playerController_Triggers.scene);
 
         //muevo al player al punto de la pantalla en que quiero que aparezca
-        playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
-        player.transform.position = playerPositionOnEnter.transform.position;
+        //playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");
+        player.transform.position = playerController_Triggers.playerPositionOnEnter.transform.position;
 
         //Reactivo los controles del player
         if (playerControllerWater != null)

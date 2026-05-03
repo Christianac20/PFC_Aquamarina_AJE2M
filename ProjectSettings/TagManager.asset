@@ -41,6 +41,7 @@ TagManager:
   - PezGato
   - PezLaboratorio
   - CameraPhotos
+  - CameraPhotosBasePoint
   layers:
   - Default
   - TransparentFX

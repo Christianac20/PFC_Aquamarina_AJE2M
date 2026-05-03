@@ -12,17 +12,13 @@ public class PlayerControllerWater : MonoBehaviour
     [Header("Variables Input System")]
     [SerializeField] InputActionAsset inputActionAsset;
 
-    [SerializeField] InputAction actionMove;
-    [SerializeField] InputAction actionLook;
-    [SerializeField] InputAction actionAttack;
-    [SerializeField] InputAction actionRun;
-    [SerializeField] InputAction actionEquipo1Camera;
-    [SerializeField] InputAction actionEquipo2Net;
-    [SerializeField] InputAction actionEquipo3NetLauncher;
-    [SerializeField] InputAction actionInteract;
+    InputAction actionMove;
+    InputAction actionLook;
+    InputAction actionRun;
+    InputAction actionInteract;
 
     [Header("Variables generales")]
-    [SerializeField] Vector2 moveAmmount;
+    public Vector2 moveAmmount;
     public float speedMultiplier = 1.0f;
     [SerializeField] float speed = 3;
 
@@ -30,25 +26,12 @@ public class PlayerControllerWater : MonoBehaviour
     [SerializeField] bool isAttacking;
     [SerializeField] bool isRunning;
     [SerializeField] bool movementY;
-    public bool cameraEquipped;
-    [SerializeField] bool cameraTakePhoto;
-    [SerializeField] bool netEquipped;
-    [SerializeField] bool netLauncherEquipped;
-    bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
-    [SerializeField] PlayerControllerWater playerControllerWater;
-    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
-    [SerializeField] SceneTransition sceneTransition;
-    [SerializeField] FollowMouse followMouse;
-
-    [Header("Otras Variables")]
-    Vector2 movement;
-    [SerializeField] GameObject cameraEquipment;
-    [SerializeField] GameObject cameraEquipmentBasePosition;
+    [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
 
     //[Header("Manejo de audio")]
     //public AudioManager audioManager;
@@ -62,20 +45,13 @@ public class PlayerControllerWater : MonoBehaviour
         actionMove = InputSystem.actions.FindAction("Move");
         actionLook = InputSystem.actions.FindAction("Look");
         actionRun = InputSystem.actions.FindAction("Run");
-        actionAttack = InputSystem.actions.FindAction("Attack");
-        actionEquipo1Camera = InputSystem.actions.FindAction("Equipo1_Camera");
-        actionEquipo2Net = InputSystem.actions.FindAction("Equipo2_Net");
-        actionEquipo3NetLauncher = InputSystem.actions.FindAction("Equipo3_NetLauncher");
         actionInteract = InputSystem.actions.FindAction("Interact");
 
         //ASIGNO LAS VARIABLES DE COMPONENTES
-        playerControllerWater = GetComponent<PlayerControllerWater>();
-        sceneTransition = FindObjectOfType<SceneTransition>();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
         animator = GetComponent<Animator>();
-        followMouse = GetComponentInChildren<FollowMouse>();
+        sceneTypeChecker = GetComponent<PlayerController_SceneTypeChecker>();
     }
 
     void Update()
@@ -93,28 +69,16 @@ public class PlayerControllerWater : MonoBehaviour
             movementY = true;
         }
 
-        //If scene transition script isn´t assigned, find it and assign it
-        if (sceneTransition == null)
-        {
-            sceneTransition = FindObjectOfType<SceneTransition>();
-        }
-
         //CHECKING IF PLAYER DIED
         CheckDeath();
 
-        //EQUIPMENT FUNCTIONS
-        CameraEquip();
-        TakePhoto();
-        NetEquip();
-        NetLauncherEquip();
+        //CHECKING IF GRAVITY IS RIGHT FOR THE LEVEL TYPE
+        CheckGravity();
 
         //ANIMATOR VARIABLES SETTINGS
         animator.SetBool("Idle", moveAmmount == Vector2.zero);
         animator.SetBool("IsRunning", isRunning);
         animator.SetBool("Y Moving", movementY);
-        animator.SetBool("CameraEquipped", cameraEquipped);
-        animator.SetBool("NetEquipped", netEquipped);
-        animator.SetBool("NetLauncherEquipped", netLauncherEquipped);
         animator.SetFloat("Y Movement", moveAmmount.y);
     }
 
@@ -130,9 +94,18 @@ public class PlayerControllerWater : MonoBehaviour
         if (timer.currentTime <= 0)
         {
             animator.SetTrigger("Death");
-            playerControllerWater.enabled = false;
+            this.enabled = false;
         }
     }
+
+    void CheckGravity()
+    {
+        if (rigidbodyPlayer.gravityScale != sceneTypeChecker.gravityWater)
+        {
+            rigidbodyPlayer.gravityScale = sceneTypeChecker.gravityWater;
+        }
+    }
+    
 
     #region MOVEMENT CONTROLS
     //MAIN BASIC MOVEMENT
@@ -143,11 +116,11 @@ public class PlayerControllerWater : MonoBehaviour
             rigidbodyPlayer.velocity = new Vector2(moveAmmount.x * speed * speedMultiplier, moveAmmount.y * speed * speedMultiplier);
 
             //FLIP PLAYER
-            if (moveAmmount.x < 0f && _facingRight == true)
+            if (moveAmmount.x < 0f && sceneTypeChecker.facingRight == true)
             {
                 Flip();
             }
-            else if (moveAmmount.x > 0f && _facingRight == false)
+            else if (moveAmmount.x > 0f && sceneTypeChecker.facingRight == false)
             {
                 Flip();
             }
@@ -157,7 +130,7 @@ public class PlayerControllerWater : MonoBehaviour
     //FIX PLAYER ORIENTATION
     public void Flip()
     {
-        _facingRight = !_facingRight;
+        sceneTypeChecker.facingRight = !sceneTypeChecker.facingRight;
 		float localScaleX = transform.localScale.x;
 		localScaleX = localScaleX * -1f;
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
@@ -194,80 +167,6 @@ public class PlayerControllerWater : MonoBehaviour
     }
 
     #endregion METODOS MODIFICADORES DEL MOVIMIENTO
-
-    #region EQUIPMENT
-    void CameraEquip()
-    {
-        if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == false)
-        {
-            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
-            cameraEquipped = true;
-            followMouse.enabled = true;
-        }
-        else if (actionEquipo1Camera.WasPressedThisFrame() && cameraEquipped == true)
-        {
-            cameraEquipped = false;
-            followMouse.enabled = false;
-            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
-        }
-        else if (moveAmmount != Vector2.zero)
-        {
-            cameraEquipped = false;
-            followMouse.enabled = false;
-            cameraEquipment.transform.position = cameraEquipmentBasePosition.transform.position;
-        }
-    }
-
-    void TakePhoto()
-    {
-        if (cameraEquipped && actionAttack.WasPressedThisFrame())
-        {
-            animator.SetTrigger("CameraTakePhoto");
-        } 
-    }
-
-    void NetEquip()
-    {
-        if (actionEquipo2Net.WasPressedThisFrame())
-        {
-            netEquipped = true;
-        }
-    }
-
-    void NetLauncherEquip()
-    {
-        if (actionEquipo3NetLauncher.WasPressedThisFrame())
-        {
-            netLauncherEquipped = true;
-        }
-    }
-    #endregion
-
-    #region TRIGGERS COLLISIONS CHECKING
-    void OnTriggerEnter2D(Collider2D trigger)
-    {
-        //Detects if player gathers an air bubble
-        if (trigger.gameObject.tag == ("AirBubble")) 
-        {
-            timer.currentTime += timer.addAir;
-            Destroy(trigger.gameObject);
-        }
-
-        //Detects if player takes damage
-        if (trigger.gameObject.tag == ("Damage"))
-        {
-            timer.currentTime -= timer.depleteAir;
-            animator.SetTrigger("DamageTaken");
-        }
-
-        //Detects if player touches a teleporter collider
-        if (trigger.gameObject.tag == ("Teleporter"))
-        {
-            Debug.Log("TP");
-            sceneTransition.SceneChange();
-        }
-    }
-    #endregion TRIGGERS COLLISIONS CHECKING
 
     #endregion METHODS
 }

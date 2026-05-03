@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestRooms/Kris_TR_Dialogue.unity
-    guid: 4313fea5b0e21a946a02ec1eaa1521ff
+    path: Assets/Scenes/TestRooms/Kris_TR_SceneChange0.unity
+    guid: 9e9757b9b77e3b840bf68e5a4db7028a
+  - enabled: 1
+    path: Assets/Scenes/TestRooms/Kris_TR_SceneChange1.unity
+    guid: 9fd284523b046aa49aefbc089d6d4965
   - enabled: 1
     path: Assets/Scenes/TestRooms/Kris_TR_SceneChange2.unity
     guid: 513e47115cd972a4583105d90fd17d71
-  - enabled: 1
-    path: Assets/Scenes/TestRooms/Kris_TR_PlayerController.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
