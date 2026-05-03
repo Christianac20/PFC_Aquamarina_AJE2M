@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 5260413005651079804}
   - component: {fileID: 2590989497295030318}
   - component: {fileID: 2223255431538443812}
+  - component: {fileID: 217133733573458813}
   - component: {fileID: 6807518153193870056}
   - component: {fileID: 7269162332515678563}
   - component: {fileID: 7920944891700734010}
@@ -363,8 +364,13 @@ MonoBehaviour:
   sceneIndex: 0
   currentScene:
     m_Handle: 0
+  animator: {fileID: 0}
   playerControllerWater: {fileID: 0}
+  playerControllerEquipment: {fileID: 0}
   playerControllerGround: {fileID: 0}
+  animatorControllers:
+  - {fileID: 9100000, guid: 585f3a4c572447048bb64a48418fc8ec, type: 2}
+  - {fileID: 9100000, guid: 50adb01a5c60a1b4bb1c43fb45f906b3, type: 2}
 --- !u!114 &2223255431538443812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,15 +390,28 @@ MonoBehaviour:
   isAttacking: 0
   isRunning: 0
   movementY: 0
-  playerControllerWater: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
   rigidbodyPlayer: {fileID: 0}
   timer: {fileID: 7920944891700734010}
-  sceneTransition: {fileID: 0}
   followMouse: {fileID: 0}
-  cameraEquipment: {fileID: 499700879370811040}
-  cameraEquipmentBasePosition: {fileID: 7773553174102043267}
+--- !u!114 &217133733573458813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65f76bfccc137c46bad04a6d82c43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 7723ea3da9515134597121e15c516c54, type: 3}
+  moveAmmount: {x: 0, y: 0}
+  speed: 3
+  animator: {fileID: 0}
+  rigidbodyPlayer: {fileID: 0}
+  timer: {fileID: 0}
 --- !u!114 &6807518153193870056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +432,7 @@ MonoBehaviour:
   netLauncherEquipped: 0
   followMouse: {fileID: 0}
   animator: {fileID: 0}
+  playerControllerWater: {fileID: 0}
   cameraEquipment: {fileID: 0}
   cameraEquipmentBasePosition: {fileID: 0}
 --- !u!114 &7269162332515678563

@@ -29,18 +29,10 @@ public class PlayerControllerWater : MonoBehaviour
     bool _facingRight = false;
 
     [Header("Variables de Componente y Scripts")]
-    [SerializeField] PlayerControllerWater playerControllerWater;
-    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
     [SerializeField] Rigidbody2D rigidbodyPlayer;
     [SerializeField] Timer timer;
-    [SerializeField] SceneTransition sceneTransition;
     [SerializeField] FollowMouse followMouse;
-
-    [Header("Otras Variables")]
-    Vector2 movement;
-    [SerializeField] GameObject cameraEquipment;
-    [SerializeField] GameObject cameraEquipmentBasePosition;
 
     //[Header("Manejo de audio")]
     //public AudioManager audioManager;
@@ -57,10 +49,7 @@ public class PlayerControllerWater : MonoBehaviour
         actionInteract = InputSystem.actions.FindAction("Interact");
 
         //ASIGNO LAS VARIABLES DE COMPONENTES
-        playerControllerWater = GetComponent<PlayerControllerWater>();
-        sceneTransition = FindObjectOfType<SceneTransition>();
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         timer = GetComponent<Timer>();
         animator = GetComponent<Animator>();
         //followMouse = GetComponentInChildren<FollowMouse>();
@@ -84,6 +73,9 @@ public class PlayerControllerWater : MonoBehaviour
         //CHECKING IF PLAYER DIED
         CheckDeath();
 
+        //CHECKING IF GRAVITY IS RIGHT FOR THE LEVEL TYPE
+        CheckGravity();
+
         //ANIMATOR VARIABLES SETTINGS
         animator.SetBool("Idle", moveAmmount == Vector2.zero);
         animator.SetBool("IsRunning", isRunning);
@@ -103,9 +95,18 @@ public class PlayerControllerWater : MonoBehaviour
         if (timer.currentTime <= 0)
         {
             animator.SetTrigger("Death");
-            playerControllerWater.enabled = false;
+            this.enabled = false;
         }
     }
+
+    void CheckGravity()
+    {
+        if (rigidbodyPlayer.gravityScale != 0.005f)
+        {
+            rigidbodyPlayer.gravityScale = 0.005f;
+        }
+    }
+    
 
     #region MOVEMENT CONTROLS
     //MAIN BASIC MOVEMENT

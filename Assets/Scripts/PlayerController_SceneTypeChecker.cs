@@ -26,8 +26,9 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        playerControllerEquipment = GetComponent<PlayerController_Equipment>();
         playerControllerWater = GetComponent<PlayerControllerWater>();
-        //playerControllerGround = GetComponent<PlayerController_Ground>();
+        playerControllerGround = GetComponent<PlayerController_Ground>();
     }
 
     // Update is called once per frame
@@ -38,17 +39,17 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
 
         if (sceneIndex == 0)
         {
-            //playerControllerGround.enabled = true; //Activa el script de control terrestre
-            //playerControllerWater.enabled = false; //Desactiva el script de control acuático
+            playerControllerGround.enabled = true; //Activa el script de control terrestre
+            playerControllerWater.enabled = false; //Desactiva el script de control acuático
             playerControllerEquipment.enabled = false; //Desactiva el script de uso de equipamientos
-            animator.runtimeAnimatorController = animatorControllers[0];
+            animator.runtimeAnimatorController = animatorControllers[0]; //Activa el animation controller para Grounded Levels
         }
         else
         {
-            //playerControllerGround.enabled = false; //Desactiva el script de control terrestre
-            //playerControllerWater.enabled = true; //Activa el script de control acuático
+            playerControllerGround.enabled = false; //Desactiva el script de control terrestre
+            playerControllerWater.enabled = true; //Activa el script de control acuático
             playerControllerEquipment.enabled = true; //Activa el script de uso de equipamientos
-            animator.runtimeAnimatorController = animatorControllers[1];
+            animator.runtimeAnimatorController = animatorControllers[1]; //Activa el animation controller para Water Levels
         }
     }
     #endregion

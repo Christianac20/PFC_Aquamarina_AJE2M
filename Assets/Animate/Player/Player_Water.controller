@@ -664,12 +664,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: IsGroundedLevel
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -897,18 +891,18 @@ AnimatorStateMachine:
   - {fileID: 121994524733503595}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -732180173059463353}
-    second:
-    - {fileID: 6881176771611999747}
-  - first: {fileID: -1014010698524649695}
-    second:
-    - {fileID: 6213943374749703791}
-  - first: {fileID: 31847653396993179}
-    second:
-    - {fileID: 3008645956041976389}
   - first: {fileID: -1373722363033020098}
     second:
     - {fileID: 3413153479992615460}
+  - first: {fileID: -1014010698524649695}
+    second:
+    - {fileID: 6213943374749703791}
+  - first: {fileID: -732180173059463353}
+    second:
+    - {fileID: 6881176771611999747}
+  - first: {fileID: 31847653396993179}
+    second:
+    - {fileID: 3008645956041976389}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 350, y: 40, z: 0}
   m_EntryPosition: {x: 350, y: 90, z: 0}
