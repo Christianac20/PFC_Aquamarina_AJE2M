@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController_Triggers : MonoBehaviour
 {
     #region VARIABLES
-    public int scene;
+    public int sceneToTPPlayer;
 
     [Header("Variables de Componente y Scripts")]
     [SerializeField] Timer timer;
@@ -63,27 +63,27 @@ public class PlayerController_Triggers : MonoBehaviour
             switch (trigger.name)
             {
                 case "TP Scene 0":
-                    scene = 0;
+                    sceneToTPPlayer = 0;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[0];
                     break;
                 case "TP Scene 1L":
-                    scene = 1;
+                    sceneToTPPlayer = 1;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[1];
                     break;
                 case "TP Scene 1R":
-                    scene = 1;
+                    sceneToTPPlayer = 1;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[2];
                     break;
                 case "TP Scene 2":
-                    scene = 2;
+                    sceneToTPPlayer = 2;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[3];
                     break;
                 case "TP Scene 3":
-                    scene = 3;
+                    sceneToTPPlayer = 3;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[4];
                     break;
                 case "TP Scene 4":
-                    scene = 4;
+                    sceneToTPPlayer = 4;
                     playerPositionOnEnter = playerPositionsArrayOnEnter[5];
                     break;
             }

@@ -6,11 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     #region VARIABLES
-    Animator canvasAnimator;
+    [SerializeField] Animator canvasAnimator;
 
     [SerializeField] AnimationClip animacionFinal;
     [SerializeField] GameObject player;
-    //[SerializeField] GameObject playerPositionOnEnter;
     [SerializeField] GameObject canvasFades;
     [SerializeField] PlayerControllerWater playerControllerWater;
     [SerializeField] PlayerController_Ground playerControllerGround;
@@ -33,15 +32,18 @@ public class SceneTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (canvasFades == null)
+        {
+            canvasFades = GameObject.FindWithTag("PanelFades");
+        }
     }
 
     public void SceneChange()
     {
-        StartCoroutine(ChangeScene());
+        StartCoroutine(ChangeScenePlayer());
     }
 
-    IEnumerator ChangeScene()
+    IEnumerator ChangeScenePlayer()
     {
         canvasAnimator.SetTrigger("Iniciar");
 
@@ -57,7 +59,7 @@ public class SceneTransition : MonoBehaviour
 
         yield return new WaitForSeconds(animacionFinal.length);
 
-        SceneManager.LoadScene(playerController_Triggers.scene);
+        SceneManager.LoadScene(playerController_Triggers.sceneToTPPlayer);
 
         //muevo al player al punto de la pantalla en que quiero que aparezca
         //playerPositionOnEnter = GameObject.FindWithTag("PositionPlayerOnEntry");

@@ -42,6 +42,8 @@ TagManager:
   - PezLaboratorio
   - CameraPhotos
   - CameraPhotosBasePoint
+  - SubmarineMap
+  - SubmarineRangeMark
   layers:
   - Default
   - TransparentFX
