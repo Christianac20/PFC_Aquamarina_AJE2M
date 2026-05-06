@@ -36,7 +36,7 @@ public class HealthBarUI : MonoBehaviour
     {
         if (playerHealth.currentTime < 120f)
         {
-            healthBarImage.sprite = spritesHealthBar[21];
+            healthBarImage.sprite = spritesHealthBar[20];
         }
         else if(playerHealth.currentTime < 100)
         {
