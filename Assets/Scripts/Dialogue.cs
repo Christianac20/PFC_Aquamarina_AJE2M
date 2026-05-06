@@ -1,15 +1,20 @@
 using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-
     #region VARIABLES
+    [Header("Variables Input System")]
+    [SerializeField] InputActionAsset inputActionAsset;
+
+    InputAction actionInteract;
+
     [Header("Dialogue Test Variables")]
     [SerializeField, TextArea(2, 4 )] private string[] dialogueLines;
-    private bool isPlayerInRange;
+    private bool isPlayerInDialogueRange;
     private bool didDialogueStart = false; // Variable para controlar si el diálogo está activo o no.
     [SerializeField] private int lineIndex = 0; // Índice de la línea de diálogo actual. 
     [SerializeField] private float typingTime = 0.05f;
@@ -32,6 +37,11 @@ public class Dialogue : MonoBehaviour
     #endregion
 
     #region METHODS
+    private void Awake()
+    {
+        //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
+        actionInteract = InputSystem.actions.FindAction("Interact");
+    }
 
     private void Start()
     {
@@ -42,7 +52,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame. Used to see what the player does each frame.
     void Update()
     {
-        if(isPlayerInRange && Input.GetKeyDown(KeyCode.E))
+        if(isPlayerInDialogueRange && actionInteract.WasPressedThisFrame())
         {
             if (!didDialogueStart)
             {
@@ -146,7 +156,7 @@ public class Dialogue : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isPlayerInRange = true;
+            isPlayerInDialogueRange = true;
             dialogueMark.SetActive(true); // Activa el objeto visual para indicar que el jugador está en rango.
         }
     }
@@ -155,7 +165,7 @@ public class Dialogue : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isPlayerInRange = false;
+            isPlayerInDialogueRange = false;
             dialogueMark.SetActive(false); // Desactiva el objeto visual para indicar que el jugador ya no está en rango.
         }
     }

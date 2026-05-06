@@ -93,8 +93,8 @@ public class PlayerControllerWater : MonoBehaviour
     {
         if (timer.currentTime <= 0)
         {
-            animator.SetTrigger("Death");
             this.enabled = false;
+            animator.SetTrigger("Death");
         }
     }
 

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor.Animations;
+using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerController_SceneTypeChecker : MonoBehaviour
@@ -16,7 +17,7 @@ public class PlayerController_SceneTypeChecker : MonoBehaviour
 
     //Comprobaciones de Ground/Water para desactivar controles segun tipo de nivel
     public bool currentSceneIsGrounded;
-    [SerializeField] int sceneIndex;
+    public int sceneIndex;
     [SerializeField] Scene currentScene;
 
     //Almacena referencias a los scripts de control de player para desactivarlos segun tipo de nivel y otros datos necesarios
