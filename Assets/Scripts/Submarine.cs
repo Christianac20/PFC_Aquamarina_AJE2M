@@ -38,6 +38,7 @@ public class Submarine : MonoBehaviour
         //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
         actionInteract = InputSystem.actions.FindAction("Interact");
         submarineMark = GameObject.FindWithTag("SubmarineRangeMark");
+        submarineMark = GameObject.FindWithTag("SubmarineMap");
         canvasFades = GameObject.FindWithTag("PanelFades");
         canvasAnimator = canvasFades.GetComponent<Animator>();
 
