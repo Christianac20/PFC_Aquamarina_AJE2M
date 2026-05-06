@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 6807518153193870056}
   - component: {fileID: 7269162332515678563}
   - component: {fileID: 7920944891700734010}
+  - component: {fileID: 1783674290655764556}
   - component: {fileID: 3597490466662552891}
   - component: {fileID: 8064327675050168116}
   m_Layer: 0
@@ -452,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae1b7f2b0893a14ba9837d1700a3f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 0
+  sceneToTPPlayer: 0
   timer: {fileID: 0}
   animator: {fileID: 0}
   bubblesDamageAnimator: {fileID: 9109162793784272297}
@@ -484,6 +485,24 @@ MonoBehaviour:
   currentTime: 0
   addAir: 20
   depleteAir: 10
+--- !u!114 &1783674290655764556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454644744081574198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82427c9977816554198206ea1afa667d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zone0Discovered: 1
+  zone1Discovered: 0
+  zone2Discovered: 0
+  zone1Discover: {fileID: 0}
+  zone2Discover: {fileID: 0}
+  sceneTypeChecker: {fileID: 0}
 --- !u!95 &3597490466662552891
 Animator:
   serializedVersion: 5

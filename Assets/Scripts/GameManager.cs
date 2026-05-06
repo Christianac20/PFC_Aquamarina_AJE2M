@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region VARIABLES
-    public GameObject[] keepObjects;
 
     #endregion
 
@@ -13,11 +12,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < keepObjects.Length; i++)
+        
+    }
+
+    private void Update()
+    {
+        if (this.transform.position != Vector3.zero)
         {
-            DontDestroyOnLoad(keepObjects[i]);
+            this.transform.position = Vector3.zero;
         }
-        //DontDestroyOnLoad(keepObjects[i]);
     }
     #endregion
 }

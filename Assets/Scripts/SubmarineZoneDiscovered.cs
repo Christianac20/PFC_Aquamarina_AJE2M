@@ -6,26 +6,45 @@ using UnityEngine.UI;
 public class SubmarineZoneDiscovered : MonoBehaviour
 {
     #region VARIABLES
-    bool zone0Discovered = true;
-    bool zone1Discovered = false;
-    bool zone2Discovered = false;
-    [SerializeField] Button buttonZone0;
-    [SerializeField] Button buttonZone1;
-    [SerializeField] Button buttonZone2;
+    //VARIABLES DE COMPROBACION DE ZONAS DESCUBIERTAS
+    public bool zone0Discovered = true;
+    public bool zone1Discovered = false;
+    public bool zone2Discovered = false;
 
+    //VARIABLES DE ACTIVACION DE TRIGGERS DE DESCUBRIR ZONAS
+    [SerializeField] Collider2D zone1Discover;
+    [SerializeField] Collider2D zone2Discover;
+
+    //VARIABLES DE SCRIPTS Y COMPONENTES
+    [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
     #endregion
 
     #region METHODS
     // Awake
     void Awake()
     {
-        
+        sceneTypeChecker = GetComponent<PlayerController_SceneTypeChecker>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SubmarineMapButtonsActivate();
+        SubmarineDiscoverZoneTriggers();
+    }
+
+    void SubmarineDiscoverZoneTriggers()
+    {
+        switch (sceneTypeChecker.sceneIndex)
+        {
+            case 1:
+                zone1Discover.enabled = true;
+                zone2Discover.enabled = false;
+                break;
+            case 2:
+                zone1Discover.enabled = false;
+                zone2Discover.enabled = true;
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
@@ -38,19 +57,6 @@ public class SubmarineZoneDiscovered : MonoBehaviour
         if (trigger.gameObject.tag == ("SubmarineZone2"))
         {
             zone2Discovered = true;
-        }
-    }
-
-    void SubmarineMapButtonsActivate()
-    {
-        if (zone1Discovered)
-        {
-            buttonZone1.enabled = true;
-        }
-
-        if (zone2Discovered)
-        {
-            buttonZone2.enabled = true;
         }
     }
     #endregion

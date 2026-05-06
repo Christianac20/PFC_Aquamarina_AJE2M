@@ -532,32 +532,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-840077708228418742
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Burbujas
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5089ea89732562d45b72cad70d2afeba, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1107 &-732180173059463353
 AnimatorStateMachine:
   serializedVersion: 6
@@ -899,13 +873,10 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -4698745297370461074}
     m_Position: {x: 330, y: 160, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -840077708228418742}
-    m_Position: {x: 365, y: 225, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -1014010698524649695}
-    m_Position: {x: 170, y: 350, z: 0}
+    m_Position: {x: 210, y: 350, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 31847653396993179}
     m_Position: {x: 30, y: 240, z: 0}
@@ -914,7 +885,7 @@ AnimatorStateMachine:
     m_Position: {x: 600, y: 240, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -732180173059463353}
-    m_Position: {x: 390, y: 350, z: 0}
+    m_Position: {x: 430, y: 350, z: 0}
   m_AnyStateTransitions:
   - {fileID: 1903739037259644436}
   - {fileID: 121994524733503595}

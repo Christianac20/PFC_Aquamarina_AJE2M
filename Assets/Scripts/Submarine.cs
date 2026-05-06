@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,11 @@ public class Submarine : MonoBehaviour
     [SerializeField] GameObject canvasFades;
     [SerializeField] Animator canvasAnimator;
     [SerializeField] AnimationClip animacionFinal;
+    [SerializeField] GameObject submarineMark;
+
+    [SerializeField] GameObject buttonZone0;
+    [SerializeField] GameObject buttonZone1;
+    [SerializeField] GameObject buttonZone2;
 
     [SerializeField] GameObject player;
     int sceneToTPSubmarine;
@@ -28,7 +34,7 @@ public class Submarine : MonoBehaviour
     [SerializeField] PlayerControllerWater playerControllerWater;
     [SerializeField] PlayerController_Ground playerControllerGround;
     [SerializeField] PlayerController_SceneTypeChecker sceneTypeChecker;
-    [SerializeField] GameObject submarineMark;
+    [SerializeField] SubmarineZoneDiscovered submarineZones;
 
     #endregion
 
@@ -38,14 +44,16 @@ public class Submarine : MonoBehaviour
         //ASIGNO LAS VARIABLES DE ACCIONES DEL INPUT SYSTEM
         actionInteract = InputSystem.actions.FindAction("Interact");
         submarineMark = GameObject.FindWithTag("SubmarineRangeMark");
-        submarineMark = GameObject.FindWithTag("SubmarineMap");
+        //submarineMark = GameObject.FindWithTag("SubmarineMap");
         canvasFades = GameObject.FindWithTag("PanelFades");
-        canvasAnimator = canvasFades.GetComponent<Animator>();
-
         player = GameObject.FindWithTag("Player");
+        submarinePositionOnEnter = GameObject.FindWithTag("SubmarinePositions");
+
+        canvasAnimator = canvasFades.GetComponent<Animator>();
         playerControllerWater = FindObjectOfType<PlayerControllerWater>();
         playerControllerGround = FindObjectOfType<PlayerController_Ground>();
         sceneTypeChecker = FindObjectOfType<PlayerController_SceneTypeChecker>();
+        submarineZones = FindObjectOfType<SubmarineZoneDiscovered>();
     }
 
     // Update is called once per frame
@@ -60,18 +68,10 @@ public class Submarine : MonoBehaviour
             submarineMap = GameObject.FindWithTag("SubmarineMap");
         }
 
-        if (isPlayerInSubmarineRange && actionInteract.WasPressedThisFrame())
-        {
-            submarineMap.SetActive(true);
-            isSubmarineMapOpen = true; 
-        }
+        MapHandler();
 
-        if (isSubmarineMapOpen == true)
-        {
-            playerControllerGround.enabled = false;
-            playerControllerWater.enabled = false;
-        }
-        
+        SubmarineMapButtonsActivate();
+
         if (isSubmarineMapOpen == false && sceneTypeChecker.sceneIndex == 0)
         {
             playerControllerGround.enabled = true;
@@ -81,22 +81,37 @@ public class Submarine : MonoBehaviour
             playerControllerWater.enabled = true;
         }
 
-            switch (sceneToTPCode)
-            {
-                case "TP Scene 0":
-                    sceneToTPSubmarine = 0;
-                    submarinePositionOnEnter = submarinePositionsArrayOnEnter[0];
-                    break;
-                case "TP Scene 1":
-                    sceneToTPSubmarine = 1;
-                    submarinePositionOnEnter = submarinePositionsArrayOnEnter[1];
-                    break;
-                case "TP Scene 2":
-                    sceneToTPSubmarine = 2;
-                    submarinePositionOnEnter = submarinePositionsArrayOnEnter[2];
-                    break;
+        switch (sceneToTPCode)
+        {
+            case "TP Scene 0":
+                sceneToTPSubmarine = 0;
+                submarinePositionOnEnter = submarinePositionsArrayOnEnter[0];
+                break;
+            case "TP Scene 1":
+                sceneToTPSubmarine = 1;
+                submarinePositionOnEnter = submarinePositionsArrayOnEnter[1];
+                break;
+            case "TP Scene 2":
+                sceneToTPSubmarine = 2;
+                submarinePositionOnEnter = submarinePositionsArrayOnEnter[2];
+                break;
 
-            }
+        }
+    }
+
+    void MapHandler()
+    {
+        if (isPlayerInSubmarineRange && actionInteract.WasPressedThisFrame())
+        {
+            submarineMap.SetActive(true);
+            isSubmarineMapOpen = true;
+        }
+
+        if (isSubmarineMapOpen == true)
+        {
+            playerControllerGround.enabled = false;
+            playerControllerWater.enabled = false;
+        }
     }
 
     public void DefinirSceneToTPCode(string nuevoValor)
@@ -146,6 +161,27 @@ public class Submarine : MonoBehaviour
         if (playerControllerGround != null)
         {
             playerControllerGround.enabled = true;
+        }
+    }
+
+    void SubmarineMapButtonsActivate()
+    {
+        if (submarineZones.zone1Discovered)
+        {
+            buttonZone1.SetActive(true);
+        }
+        else 
+        {
+            buttonZone1.SetActive(false);
+        }
+
+        if (submarineZones.zone2Discovered)
+        {
+            buttonZone2.SetActive(true);
+        }
+        else
+        {
+            buttonZone2.SetActive(false);
         }
     }
 
