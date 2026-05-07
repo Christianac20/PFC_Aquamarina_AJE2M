@@ -130,13 +130,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezComecocos_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (21)
+      value: PezComecocos_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164801812391131172, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 295.8714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164801812391131172, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 423.86157
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez comecocos, Phagodens spectravorus\nMide entre 1,10 - 1,30cm\nH\xE1bitat:
+        Zona media\nEsperanza de  vida: 10 - 15 a\xF1os\nDieta: Omn\xEDvora (Phantom
+        marina)\nCar\xE1cter: Aresivo\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO
+        CURIOSO:\nSe siente atra\xEDdo por el pez fantasma, al que persigue gui\xE1ndose
+        por su silueta."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_margin.z
+      value: 1.1602783
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -218,6 +242,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezComecocos_NO_Display
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -227,6 +255,207 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 11373974}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &28936575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28936576}
+  - component: {fileID: 28936578}
+  - component: {fileID: 28936577}
+  m_Layer: 5
+  m_Name: Image_PezEsqueleto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &28936576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28936575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 833934406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &28936577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28936575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1551808157, guid: c003b266b2aa3b549a2ed09fcbd38244, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &28936578
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28936575}
+  m_CullTransparentMesh: 1
+--- !u!1001 &34774345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 39750808}
+    m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezEsqueleto_NO_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezEsqueleto_NO_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez esqueleto, Osteichthys spectrus\nMide entre 15 - 25 cm\nH\xE1bitat:
+        Zona media\nEsperanza de  vida: 4 - 6 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter:
+        Asustadizo\nEstado de conservaci\xF3n:\nNo evaluado\n\nDATO CURIOSO:\nSu
+        cuerpo muestra estructuras \xF3seas visibles bajo \nuna piel muy fina."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1657.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 932.3403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3909056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -137.29907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -141.10449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezEsqueleto_NO_Display
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+--- !u!224 &34774346 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 34774345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &34774347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 34774345}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &39750807
 GameObject:
@@ -261,36 +490,166 @@ Transform:
   - {fileID: 557495181}
   - {fileID: 1801576725}
   - {fileID: 1637623859}
-  - {fileID: 1903266048}
   - {fileID: 1784942251}
+  - {fileID: 1903266048}
   - {fileID: 505580200}
   - {fileID: 912573217}
   - {fileID: 749135133}
   - {fileID: 513623533}
+  - {fileID: 680854930}
   - {fileID: 124117371}
   - {fileID: 222491460}
   - {fileID: 2040095242}
   - {fileID: 1544076608}
   - {fileID: 1209550512}
   - {fileID: 1596289353}
-  - {fileID: 863164632}
-  - {fileID: 183750390}
+  - {fileID: 826796444}
   - {fileID: 1717452438}
+  - {fileID: 183750390}
+  - {fileID: 863164632}
   - {fileID: 165457142}
-  - {fileID: 746764116}
   - {fileID: 11373975}
-  - {fileID: 224155174}
+  - {fileID: 746764116}
+  - {fileID: 34774346}
   - {fileID: 177597892}
-  - {fileID: 1795748202}
-  - {fileID: 1128908463}
   - {fileID: 1626141761}
-  - {fileID: 1863437751}
+  - {fileID: 1795748202}
+  - {fileID: 224155174}
+  - {fileID: 1128908463}
   m_Father: {fileID: 378374885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &40255289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1368533033}
+    m_Modifications:
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 826796445}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Name
+      value: PezFantasma_Registro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 664598382}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+--- !u!224 &40255290 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+  m_PrefabInstance: {fileID: 40255289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &48178861 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1476519929986719029, guid: 31061644b00b2634ebbcb2f59743c09f, type: 3}
   m_PrefabInstance: {fileID: 7237904407354675064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &57142975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1544076607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &75083907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 222491459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &78509804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1128908462}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &97330294
 PrefabInstance:
@@ -409,14 +768,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: TortugaBoba_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (10)
+      value: TortugaBoba_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Tortuga Boba, Caretta caretta\nMide entre 0,9 - 1,2 m\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 50 - 80 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Tranquilo\nEstado de conservaci\xF3n:\nEn peligro\n\nDATO CURIOSO:\nPuede
+        recorrer miles de kil\xF3metros y siempre regresa a la playa donde naci\xF3
+        para poner huevos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -174099735, guid: 984845c2d4bbe0a41a38ef3682fab3a2, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -496,6 +871,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: TortugaBoba_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -699,6 +1078,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1719554363}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: MedusaLuna_Registro
@@ -724,13 +1111,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Pulpo_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (19)
+      value: Pulpo_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pulpo, Octopus vulgaris\nMide entre 50 - 80 cm\nH\xE1bitat: Zona media\nEsperanza
+        de  vida: 1 - 2 a\xF1os\nDieta: Can\xEDvora\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nPuede abrir frascos,
+        usar herramientas y cambiar de color para camuflarse en segundos."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -811,6 +1209,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Pulpo_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -910,6 +1312,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 303472263}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Pulpo_NO_Registro
@@ -935,13 +1345,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezBala_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (23)
+      value: PezBala_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez bala, Projicientis rapidus\nMide entre 2 - 5 cm\nH\xE1bitat: Abismo\nEsperanza
+        de  vida: 5 - 8 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nSu cuerpo es extremadamente
+        aerodin\xE1mico y puede impulsarse a gran velocidad en distancias cortas."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -1022,6 +1443,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezBala_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1033,6 +1458,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 177597891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &180776101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 912573216}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &183750389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1041,13 +1471,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezFoco_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (17)
+      value: PezFoco_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez Foco, Photichthys sp.\nMide entre 5 - 10 cm\nH\xE1bitat: Zona media\nEsperanza
+        de  vida: 2 - 3 a\xF1os\nDieta: Carn\xEDvoro\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nAmenazado\n\nDATO CURIOSO:\nSu boca emite un foco de
+        luz, ayud\xE1ndole a atraer presas y comunicarse en aguas oscuras.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -1115,7 +1556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -141.10449
+      value: -141.10446
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1128,6 +1569,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezFoco_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1303,37 +1748,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1170995398}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: CaballitoDeMar_Registro
@@ -1359,14 +1776,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: TiburonBlanco_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (11)
+      value: TiburonBlanco_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Tiibur\xF3n Blanco, Carcharodon carcharias\nMide entre 4 - 6 m\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 30 - 70 a\xF1os\nDieta: Corn\xEDvora\nCar\xE1cter:
+        Tranquilo\nEstado de conservaci\xF3n:\nVulnerable\n\nDATO CURIOSO:\nPuede
+        detectar se\xF1ales el\xE9ctricas producidas por otros animales."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1811928056, guid: b1aa82ce13aa1bb4d8edfb3976d04c8d, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1446,6 +1878,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: TiburonBlanco_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1465,13 +1901,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: AnguilaPelicano_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (22)
+      value: AnguilaPelicano_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez pel\xEDcano, Eurypharynx pelecanoides\nMide entre 8 - 11 cm\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 6 - 8 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Territorial\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nTiene
+        una boca extensible para capturar presas mucho m\xE1s grandes que su cuerpo."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -1552,6 +1999,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: AnguilaPelicano_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1575,7 +2026,7 @@ GameObject:
   - component: {fileID: 237671771}
   - component: {fileID: 237671770}
   m_Layer: 5
-  m_Name: Image_PezCristal
+  m_Name: Image_PezGema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,6 +2089,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237671768}
   m_CullTransparentMesh: 1
+--- !u!1 &272121160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 749135132}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &293484785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,7 +2106,7 @@ GameObject:
   - component: {fileID: 293484788}
   - component: {fileID: 293484787}
   m_Layer: 5
-  m_Name: Image_PezDinosaurio
+  m_Name: Image_PezPeluche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1788,6 +2244,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295161081}
   m_CullTransparentMesh: 1
+--- !u!1 &303472263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 165457141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &306338000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,10 +2452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2201,6 +2662,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5774096897160604193, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
   m_PrefabInstance: {fileID: 1226113064840608751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &425585902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 183750389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &427909848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2830,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 485330016}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezHacha_Registro
@@ -2469,6 +2943,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1370221638}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezBala_NO_Registro
@@ -2485,6 +2967,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 472857365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &485330016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+  m_PrefabInstance: {fileID: 438624140}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &487524078
 GameObject:
@@ -2644,14 +3131,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Raya_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (6)
+      value: Raya_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Raya, Dasyatis pastinaca\nMide entre 50 - 2 cm\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 15 - 25 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nVulnerable\n\nDATO CURIOSO:\nSu cola tiene una o m\xE1s
+        espinas con veneno; puede usarla como defensa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -499831275, guid: 09252e8e6e681274bb4cff35e81c4ffe, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2742,111 +3244,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 505580199}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &508175382
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1368533033}
-    m_Modifications:
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      propertyPath: m_Name
-      value: PezLaboratorio_NO_Registro
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1720098309}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
---- !u!224 &508175383 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
-  m_PrefabInstance: {fileID: 508175382}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &513623532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2855,125 +3252,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Barracuda_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (9)
+      value: Barracuda_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Barracuda, Sphyraena\nMide entre 60 - 1,5 m\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 10 - 15 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Territorial\nEstado
+        de conservaci\xF3n:\nVulnerable\n\nDATO CURIOSO:\nAlcanza velocidades muy
+        altas al atacar a su presa gracias a su cuerpo alargado y aerodin\xE1mico."
       objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1657.4939
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 932.3403
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3909056
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -137.29907
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -141.10449
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
---- !u!224 &513623533 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-  m_PrefabInstance: {fileID: 513623532}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &549284299 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6365165045307994957, guid: ce149a385194ce24aaff2c92a7845182, type: 3}
-  m_PrefabInstance: {fileID: 148281963200393341}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &557495180
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 39750808}
-    m_Modifications:
-    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Name
-      value: CaballitoDeMar_Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -521270291, guid: c4d9bf90294ec3a4da7a86ee058bcb92, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3056,7 +3357,146 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: Panel_CaballitoDeMar
+      value: Barracuda_Display
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+--- !u!224 &513623533 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 513623532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &534725327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 224155173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &549284299 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6365165045307994957, guid: ce149a385194ce24aaff2c92a7845182, type: 3}
+  m_PrefabInstance: {fileID: 148281963200393341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &557495180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 39750808}
+    m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: CaballitoDeMar_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: CaballitoDeMar_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Caballito de mar, Hippocampus\n(2 - 15 cm)\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 1 - 5 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nVulnerable\n\nDATO CURIOSO:\nEs el macho quien gesta
+        a las cr\xEDas"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -31088006, guid: 6aa81a39df772ed46be96427d44a8718, type: 3}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1657.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 932.3403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3909056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -137.29907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -141.10449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: CaballitoDeMar_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3306,6 +3746,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2849791245915781318, guid: 0b477423d63b52d4ba6e55fe3d7090c2, type: 3}
   m_PrefabInstance: {fileID: 6874832396001104599}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &608811722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 124117370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &610385542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
@@ -3554,6 +3999,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 608811722}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: TortugaBoba_Registro
@@ -3659,6 +4112,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223906380}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Raya_Registro
@@ -3676,6 +4137,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 659664768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &664598381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 664598382}
+  - component: {fileID: 664598384}
+  - component: {fileID: 664598383}
+  m_Layer: 5
+  m_Name: Image_PesFantasma
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &664598382
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664598381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 40255290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &664598383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664598381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1551808157, guid: c003b266b2aa3b549a2ed09fcbd38244, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &664598384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664598381}
+  m_CullTransparentMesh: 1
 --- !u!1 &680335519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +4370,141 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &680854929
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 39750808}
+    m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Delfin_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Delfin_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Dlf\xEDn, Delphinus delphis\nMide entre 1,5 - 2,5 m\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 20 - 30 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nAmenazado\n\nDATO CURIOSO:\nSon extremadamente inteligentes
+        y pueden comunicarse mediante sonidos y gestos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1986938090, guid: 2cd69e894cc6dbe418704d982a4f8fc2, type: 3}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1657.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 932.3403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3909056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -137.29907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -141.10449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Delfin_Display
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+--- !u!224 &680854930 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 680854929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &680854931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 680854929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &696126440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 11373974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &699646685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3917,13 +4588,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Calamar_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (20)
+      value: Calamar_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Calamar,Loligo vulgaris\nMide entre 20 - 50 cm\nH\xE1bitat: Zona media\nEsperanza
+        de  vida: 1 - 2 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nPuede expulsar tinta
+        para escapar de depredadores y desplazarse r\xE1pidamente mediante propulsi\xF3n
+        a chorro."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -4004,6 +4687,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Calamar_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4023,14 +4710,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Atun_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (8)
+      value: Atun_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "At\xFAn, Thunnus\nMide entre 60 cm  - 2,5 m\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 10 - 40 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nSobreexplotado\n\nDATO CURIOSO:\nEs uno de los peces
+        m\xE1s r\xE1pidos del oc\xE9ano; algunos atunes pueden nadar a m\xE1s de
+        70 km/h."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1812892304, guid: f94e446540468c0459c65a89cf1743a0, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4111,6 +4814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Atun_Display
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4120,6 +4827,249 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 749135132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &826796443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 39750808}
+    m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezFantasma_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezFantasma_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez Fantasma, Phathom marina\nMide entre 5 - 10 cm\nH\xE1bitat: Zona
+        media\nEsperanza de  vida: Desconocida\nDieta: Carn\xEDvora\nCar\xE1cter:
+        Asustadizo\nEstado de conservaci\xF3n:\nAmenazado\n\nDATO CURIOSO:\nSu cuerpo
+        es casi transparente y parece desvanecerse en la oscuridad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1551808157, guid: c003b266b2aa3b549a2ed09fcbd38244, type: 3}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1657.4939
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 932.3403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3909056
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -137.29907
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -141.10449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PesFantasma_Display
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+--- !u!224 &826796444 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 826796443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &826796445 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 826796443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &833934405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1368533033}
+    m_Modifications:
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 34774347}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Name
+      value: PezEsqueleto_NO_Registro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28936576}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+--- !u!224 &833934406 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+  m_PrefabInstance: {fileID: 833934405}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &839042034
 GameObject:
@@ -4279,14 +5229,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Gamba_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (16)
+      value: Gamba_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Gamba, Parapenaeus longirostris\nMide entre 10 - 20 cm\nH\xE1bitat:
+        Zona media\nEsperanza de  vida: 2 - 4 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Asustadizo\nEstado de conservaci\xF3n:\nNo evaluado\n\nDATO CURIOSO:\nPueden
+        detectar vibraciones en el agua, lo que les permite huir r\xE1pidamente de
+        depredadores."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1548140202, guid: 3f025fa6f6bb850468036ec86811dca0, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4366,6 +5332,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Gamba_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4432,13 +5402,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezCometa_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (7)
+      value: PezCometa_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez Cometa, Carassius auratus\nMide entre 0,8 - 1,5 m\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 5 - 10 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Tranquilo\nEstado de conservaci\xF3n:\nEn peligro\n\nDATO CURIOSO:\nTiene
+        forma alargada y triangulas que recuerda a una cometa infantil."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -4520,6 +5501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezCometa_Display
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4529,6 +5514,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 912573216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &912646382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 863164631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &940624727
 GameObject:
@@ -4843,6 +5833,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015180455}
   m_CullTransparentMesh: 1
+--- !u!1 &1030468364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030468365}
+  - component: {fileID: 1030468367}
+  - component: {fileID: 1030468366}
+  m_Layer: 5
+  m_Name: Image_Delfin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030468365
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030468364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1501833574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1030468366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030468364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1986938090, guid: 2cd69e894cc6dbe418704d982a4f8fc2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1030468367
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030468364}
+  m_CullTransparentMesh: 1
 --- !u!1 &1051050749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,6 +6066,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1058951550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1795748201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1067036476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1717452437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1075026709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 2040095241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1092381073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1626141760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1115204945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,13 +6197,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGato_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (25)
+      value: PezGato_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez gato, Makofelis Abyssalis\nMide entre 40 - 70 cm\nH\xE1bitat: Abismo\nEsperanza
+        de  vida: 14 - 16 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nPosee largos bigotes
+        similares a los de los gatos, los usa para detectar vibraciones y moverse
+        con precisi\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -5199,6 +6296,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGato_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5303,9 +6404,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1058951550}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
-      value: PezDinosaurio_NO_Registro
+      value: PezPeluche_NO_Registro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5319,6 +6428,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 1147702923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1170995398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 557495180}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1183032770
 PrefabInstance:
@@ -5408,6 +6522,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1543034504}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezCirujanoAzul_Registro
@@ -5433,14 +6555,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: AngelMarino_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (14)
+      value: AngelMarino_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "\xC1ngel Marino, Clionidae\nMide entre 2 - 5 cm\nH\xE1bitat: Zona media\nEsperanza
+        de  vida: 1 - 2 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nNo evaluado\n\nDATO CURIOSO:\n A pesar de su aspecto
+        adorable, es un depredador que se alimenta principalmente de otros peque\xF1os
+        moluscos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1489913870, guid: 7d94da19e290d3840aadf3c61478dc06, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5520,6 +6658,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: AngelMarino_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5619,6 +6761,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 180776101}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezCometa_Registro
@@ -5711,6 +6861,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215737118}
   m_CullTransparentMesh: 1
+--- !u!1 &1223906380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 505580199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251470753
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,6 +7212,11 @@ MonoBehaviour:
   canvasFades: {fileID: 0}
   playerControllerWater: {fileID: 0}
   playerControllerGround: {fileID: 0}
+--- !u!1 &1311457134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1801576724}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1338038240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6144,6 +7304,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1559544558}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -6387,6 +7555,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
   m_PrefabInstance: {fileID: 1226113064840608751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1370221638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 177597891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1371774644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,6 +7780,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1075026709}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezLuna_Registro
@@ -6711,6 +7892,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1092381073}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -6891,6 +8080,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2115519520}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -7147,9 +8344,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1067036476}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
-      value: PezCristal_NO_Registro
+      value: PezGema_NO_Registro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7257,6 +8462,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 912646382}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Gamba_Registro
@@ -7273,6 +8486,119 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 1496225060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1501833573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1368533033}
+    m_Modifications:
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 680854931}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_Name
+      value: Delfin_Registro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1030468365}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+--- !u!224 &1501833574 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+  m_PrefabInstance: {fileID: 1501833573}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1538556350
 PrefabInstance:
@@ -7362,6 +8688,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 272121160}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Atun_Registro
@@ -7379,6 +8713,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 1538556350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1543034504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1637623858}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1544076607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7387,13 +8726,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Orca_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (13)
+      value: Orca_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Orca, Orcinus orca\nMide entre 6 - 8 cm\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 50 - 90 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Curioso\nEstado
+        de conservaci\xF3n:\nDatos insuficientes\n\nDATO CURIOSO:\nEs el delf\xEDn
+        m\xE1s grande del mundo y tiene estrategias de caza muy complejas y coordinadas."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -7474,6 +8824,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Orca_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7572,6 +8926,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 78509804}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -7748,6 +9110,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1559544558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+  m_PrefabInstance: {fileID: 1338038240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1580941451 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8176115563883777337, guid: 18129e5dc475c4447a6507235176082d, type: 3}
@@ -7836,14 +9203,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezHacha_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (15)
+      value: PezHacha_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez hacha,Argyropelecus sp.\nMide entre 5 - 10 cm\nH\xE1bitat: Zona
+        media\nEsperanza de  vida: 3- 5 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter:
+        Asustadizo\nEstado de conservaci\xF3n:\nNo evaluado\n\nDATO CURIOSO:\nTiene
+        \xF3rganos bioluminiscentes que usa para camuflarse con la luz, volvi\xE9ndose
+        casi invisible."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1357679952, guid: a474d93ffeeef614fa671276bfe4eec4, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7923,6 +9306,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezHacha_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7942,13 +9329,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezLinterna_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (26)
+      value: PezLinterna_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez linterna, Melanocetus johnsonii\nMide entre 10 - 20 cm\nH\xE1bitat:
+        Abismo\nEsperanza de  vida: 10 - 15 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter:
+        Agresivo\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nLas
+        hembras tienen un ap\xE9ndice luminoso en la cabeza para atraer a sus presas."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -8029,6 +9427,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezLinterna_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8048,14 +9450,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezCirujano_Azul_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (3)
+      value: PezCirujano_Azul_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez payaso, Paracanthurus hepatus\nMide entre 5 - 25 cm\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 8 - 20 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Curioso\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nTiene
+        una espina afilada cerca de su cola que usa como defensa. De ah\xED su nombre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -853387649, guid: 38794b9bfaa61c54ab26878013fae81d, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8135,6 +9552,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezCirujano_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8542,13 +9963,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGema_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (18)
+      value: PezGema_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez gema, Vitreus translucens\nMide entre 6 - 12 cm\nH\xE1bitat: Zona
+        media\nEsperanza de  vida: 2 - 3 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Curioso\nEstado de conservaci\xF3n:\nEn peligro\n\nDATO CURIOSO:\n Su cuerpo
+        est\xE1 formado por cristales que reflejan la luz como una gema, brillando
+        en la oscuridad del oc\xE9ano."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -8630,6 +10063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGema_NO_Display
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8640,81 +10077,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
   m_PrefabInstance: {fileID: 1717452437}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1720098308
+--- !u!1 &1719554363 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1784942250}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1720098309}
-  - component: {fileID: 1720098311}
-  - component: {fileID: 1720098310}
-  m_Layer: 5
-  m_Name: Image_PezLaboratorio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1720098309
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &1755548748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 746764115}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720098308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 508175383}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1720098310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720098308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 1551808157, guid: c003b266b2aa3b549a2ed09fcbd38244, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1720098311
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720098308}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1781259940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8802,6 +10174,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 696126440}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -8908,6 +10288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534725327}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: AnguilaPelicano_NO_Registro
@@ -8933,14 +10321,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: MedusaLuna_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (5)
+      value: MedusaLuna_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Medusa Luna, Aurelia Aurita\nMide entre 25 - 40 cm\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 1 a\xF1o\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado de
+        conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nSu picadura es muy leve,
+        a veces imperceptible."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1190612770, guid: 88aad5fdde690474d997e8f6e32166cf, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9020,6 +10423,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: MedusaLuna_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9153,13 +10560,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezPeluche_NO_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (24)
+      value: PezPeluche_NO_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez peluche, Hipporex marinus\nMide entre 0,8 - 1,10 cm\nH\xE1bitat:
+        Abismo\nEsperanza de  vida: No evaluada\nDieta: Car\xEDvoro\nCar\xE1cter:
+        Tranquilo\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nGracias
+        a su aspecto adorable puede utilizar emboscadas r\xE1pidas para atrapar a
+        sus presas."
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -9240,6 +10659,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezPeluche_NO_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9259,14 +10682,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGlobo_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (2)
+      value: PezGlobo_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7164801812391131172, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 325.3974
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164801812391131172, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 414.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164801812391131172, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -157.09372
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez globo, Tetraodontidae\n(10 - 60 cm)\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 10 - 60 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Asustadizo\nEstado
+        de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nPosee una de las toxnias
+        naturales m\xE1s potentes del oc\xE9ano"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_fontSize
+      value: 17.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 17.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -92521163, guid: 9ec2999a09ba8104c8ca61007a7d7fed, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9346,6 +10808,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezGlobo_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9444,6 +10910,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1311457134}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -9550,6 +11024,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 425585902}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: PezFoco_NO_Registro
@@ -9655,6 +11137,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 75083907}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: TiburonBlanco_Registro
@@ -9671,112 +11161,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 1858060010}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1863437750
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 39750808}
-    m_Modifications:
-    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Name
-      value: PezPayaso_Panel (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1657.4939
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 932.3403
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3909056
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -137.29907
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -141.10449
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
---- !u!224 &1863437751 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-  m_PrefabInstance: {fileID: 1863437750}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1868257656
 PrefabInstance:
@@ -9866,6 +11250,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1755548748}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Calamar_NO_Registro
@@ -9891,14 +11283,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Anchoa_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (4)
+      value: Anchoa_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Anchoa, Engraulis encrasicolus\nMide entre 12 - 20 cm\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 3 - 4 a\xF1os\nDieta: Planct\xEDvora\nCar\xE1cter:
+        Tranquilo\nEstado de conservaci\xF3n:\nNo amenazada\n\nDATO CURIOSO:\nEs
+        una especie clave en la cadena alimentaria marina, muchos depredadores dependen
+        de ella."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -83972962, guid: 1a3ee7c90c4fb0e46acbd54c0f93f255, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9978,6 +11386,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: Anchoa_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10157,6 +11569,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2002982300}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
       value: Anchoa_Registro
@@ -10173,6 +11593,11 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
   m_PrefabInstance: {fileID: 2000420517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2002982300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 1903266047}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &2004156988 stripped
 RectTransform:
@@ -10262,14 +11687,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezLuna_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
-      value: PezPayaso_Panel (12)
+      value: PezLuna_Panel
       objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez Luna, Mola mola\nMide entre 2 -3 m\nH\xE1bitat: Superficie\nEsperanza
+        de  vida: 10 - 20 a\xF1os\nDieta: Carn\xEDvora\nCar\xE1cter: Tranquilo\nEstado
+        de conservaci\xF3n:\nVulnerable\n\nDATO CURIOSO:\nEs el pez \xF3seo m\xE1s
+        pesado del mundo; algunos pueden superar las 2 toneladas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530015384707008554, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -520843836, guid: eaa6b1ff8ca09f54e96c00c8ad2dcb67, type: 3}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10349,6 +11789,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezLuna_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10449,6 +11893,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 128220652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2115519520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+  m_PrefabInstance: {fileID: 513623532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2116804866
 GameObject:
   m_ObjectHideFlags: 0
@@ -10608,6 +12057,14 @@ PrefabInstance:
     - target: {fileID: 2084032641163530588, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 57142975}
+    - target: {fileID: 4401262798929577798, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7293314951841256429, guid: ad58144c53bfbde4f8ea2476f5084a10, type: 3}
       propertyPath: m_Name
@@ -11844,10 +13301,10 @@ PrefabInstance:
       addedObject: {fileID: 1183032771}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2000420518}
+      addedObject: {fileID: 142423910}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 142423910}
+      addedObject: {fileID: 2000420518}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 659664769}
@@ -11860,6 +13317,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476337553}
+    - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1501833574}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 654908171}
@@ -11880,25 +13340,28 @@ PrefabInstance:
       addedObject: {fileID: 438624141}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1496225061}
-    - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1812697413}
+      addedObject: {fileID: 40255290}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1482795539}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 172568598}
+      addedObject: {fileID: 1812697413}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1868257657}
+      addedObject: {fileID: 1496225061}
+    - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172568598}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1781259941}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1781991872}
+      addedObject: {fileID: 1868257657}
+    - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 833934406}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 472857366}
@@ -11910,10 +13373,10 @@ PrefabInstance:
       addedObject: {fileID: 1147702924}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1544900449}
+      addedObject: {fileID: 1781991872}
     - targetCorrespondingSourceObject: {fileID: 1309761768861544024, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 508175383}
+      addedObject: {fileID: 1544900449}
     - targetCorrespondingSourceObject: {fileID: 7232917822646623016, guid: cbe85d562bc161a43b249e939f49b6f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 317759277}
@@ -12226,6 +13689,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 4983988686100551591}
+    - target: {fileID: 4915839336000211280, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2222223
+      objectReference: {fileID: 0}
     - target: {fileID: 5147383132952191543, guid: d26209210252048418c68203a9719639, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -12465,21 +13932,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 39750808}
     m_Modifications:
+    - target: {fileID: 4704768175021431374, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezPayaso_Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Name
       value: PezPayaso_Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
-      propertyPath: m_hasFontAssetChanged
+    - target: {fileID: 4853940785032612425, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345713566715432131, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_text
+      value: "Pez payaso, Amphiprion ocellaris\nMide entre 8 - 11 cm\nH\xE1bitat:
+        Superficie\nEsperanza de  vida: 6 - 8 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter:
+        Territorial\nEstado de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nEl
+        macho dominante puede cambiar de sexo si\r\nla hembra muere"
       objectReference: {fileID: 0}
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_Pivot.x
@@ -12560,6 +14030,10 @@ PrefabInstance:
     - target: {fileID: 8561369567161561861, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799032829394189028, guid: c06fa4e09c152c3409c0e6aef08f462a, type: 3}
+      propertyPath: m_Name
+      value: PezPayaso_Display
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

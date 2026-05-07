@@ -65,13 +65,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Amphiprion ocellaris\n(8 - 11 cm)\nH\xE1bitat: Superficie\nEsperanza de 
-    vida: 6 - 8 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter: Territorial\nEstado de
-    conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nEl macho dominante puede cambiar
-    de sexo si\r\nla hembra muere"
+  m_text: "Pez payaso (Amphiprion ocellaris)\nMide entre 8 - 11 cm\nH\xE1bitat: Superficie\nEsperanza
+    de  vida: 6 - 8 a\xF1os\nDieta: Omn\xEDvora\nCar\xE1cter: Territorial\nEstado
+    de conservaci\xF3n:\nNo amenazado\n\nDATO CURIOSO:\nEl macho dominante puede
+    cambiar de sexo si\r\nla hembra muere"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 355857c278d91254eaac9f84b5979225, type: 2}
+  m_sharedMaterial: {fileID: -1444354143768123123, guid: 355857c278d91254eaac9f84b5979225, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.1
-  m_fontSizeBase: 19.1
+  m_fontSize: 17.66
+  m_fontSizeBase: 17.66
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
