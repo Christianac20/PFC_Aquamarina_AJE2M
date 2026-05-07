@@ -1886,6 +1886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Calamar
       objectReference: {fileID: 0}
+    - target: {fileID: 5112829616007136000, guid: b19469333335b734c8d63d967e6ae569, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08b25eb2cb7dc5642ad7ff443abbb237, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
