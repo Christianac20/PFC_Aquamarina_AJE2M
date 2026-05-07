@@ -1447,6 +1447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 1499193885186064725, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5803131011040064339, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0351455
@@ -1488,6 +1492,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6550432466101091317, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
+      propertyPath: npcVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 9663f4a28232d4d4e89d69137bab70f7, type: 3}
+    - target: {fileID: 6550432466101091317, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
+      propertyPath: playerVoice
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e7bb9154a45b454cb12ef13a48ae2ee, type: 3}
+    - target: {fileID: 6550432466101091317, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
       propertyPath: portraitNPC
       value: 
       objectReference: {fileID: 1993937603}
@@ -1503,6 +1515,10 @@ PrefabInstance:
       propertyPath: portraitPlayer
       value: 
       objectReference: {fileID: 726581138}
+    - target: {fileID: 6550432466101091317, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
+      propertyPath: charsToPlayAudio
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6550432466101091317, guid: 8d2d626c932d3c9468d72801913a0506, type: 3}
       propertyPath: playerController
       value: 
@@ -1527,6 +1543,10 @@ PrefabInstance:
     - target: {fileID: 5147383132952191543, guid: d26209210252048418c68203a9719639, type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692693459589832777, guid: d26209210252048418c68203a9719639, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4890614
       objectReference: {fileID: 0}
     - target: {fileID: 5904942823582840995, guid: d26209210252048418c68203a9719639, type: 3}
       propertyPath: m_LocalPosition.x
