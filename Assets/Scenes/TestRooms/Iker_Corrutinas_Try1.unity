@@ -375,10 +375,11 @@ MonoBehaviour:
   tarjectRigidbody: {fileID: 1362743827}
   agresive: 0
   distanceDifference: {x: 0, y: 0}
-  scaredVelocity: 0
-  detectVelocity: 0
-  playerScript: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  agresiveVelocity: 0
+  detectVelocity: 1
+  playerScript: {fileID: 1362743826}
+  spriteRenderer: {fileID: 1362743839}
+  launchToPlayerPosition: {x: 0, y: 0}
 --- !u!195 &623464914
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -401,6 +402,41 @@ NavMeshAgent:
   m_BaseOffset: 0.64
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!58 &623464917
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623464909}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.02
 --- !u!1 &800323822
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +716,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2098570872850567413, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
   m_PrefabInstance: {fileID: 1516230502}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1362743839 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9188591928737259474, guid: 8b33b5e9fd1373f43a650334959303f2, type: 3}
+  m_PrefabInstance: {fileID: 1516230502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1410535590
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +874,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2163844374635399857, guid: a519b8df6d0ff484b97b549c5f51bd25, type: 3}
       insertIndex: -1
       addedObject: {fileID: 623464914}
+    - targetCorrespondingSourceObject: {fileID: 2163844374635399857, guid: a519b8df6d0ff484b97b549c5f51bd25, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 623464917}
   m_SourcePrefab: {fileID: 100100000, guid: a519b8df6d0ff484b97b549c5f51bd25, type: 3}
 --- !u!1001 &7267823496798356708
 PrefabInstance:
