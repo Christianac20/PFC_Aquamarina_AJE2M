@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f94e446540468c0459c65a89cf1743a0
+guid: 2e7974b2f53c65549ab6db5175b564a8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c9a48cc306a9094fb0cbf300a25a54d
-      internalID: -1812892304
+      spriteID: 1fe50a1c112ea7a49b9599ad1044b08d
+      internalID: -1110072896
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ff4ae10a4f784d43abf307126afb0c6
-      internalID: 1296456895
+      spriteID: ba765a4f34e93c045b8e70221c5c9cd0
+      internalID: -1678012044
       vertices: []
       indices: 
       edges: []
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09c52b70ecec23f4abb800c52f1d8fc3
-      internalID: 1550593406
+      spriteID: ee85225dd27e9b4499c1a252627d16f4
+      internalID: 971922056
       vertices: []
       indices: 
       edges: []
@@ -189,8 +189,8 @@ TextureImporter:
       name: Atun_Nadando_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff905e67d9d8b154197dc134afc5dcba
-      internalID: -1950521695
+      spriteID: 267d3eb6f32e6fa489c11fc9144b47cf
+      internalID: 1592818564
       vertices: []
       indices: 
       edges: []
@@ -210,8 +210,8 @@ TextureImporter:
       name: Atun_Nadando_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 64
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3eb7b08d78371448d3ab49bac8b51d
-      internalID: 209421100
+      spriteID: 573137785fd5e7f418c4695149ab7d00
+      internalID: -1495799387
       vertices: []
       indices: 
       edges: []
@@ -231,8 +231,8 @@ TextureImporter:
       name: Atun_Nadando_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 128
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef7900046bae500488c872b894e8505c
-      internalID: 1409740785
+      spriteID: a7d5f1cac1e3cab4aa56db88a5ef0e8d
+      internalID: 1474688662
       vertices: []
       indices: 
       edges: []
@@ -252,8 +252,8 @@ TextureImporter:
       name: Atun_Nadando_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 0
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4e64dbd1f2036741ba4a752921bf59f
-      internalID: -1454468900
+      spriteID: 1d551b78bc576a742a5cc3389f6db565
+      internalID: 1259602101
       vertices: []
       indices: 
       edges: []
@@ -273,132 +273,6 @@ TextureImporter:
       name: Atun_Nadando_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b8ead8ec241c0a45821bf281a70c4d5
-      internalID: -1037625959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b72b5bf7ac9f5a458a133f706aa1398
-      internalID: -1820431456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_9
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc2cd247936135d4890e6b385a4f1b27
-      internalID: 1058610125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 426c062c61b93064499a3740f21f476f
-      internalID: 1318250201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2a5912897c7a964b836ad5f357db1eb
-      internalID: 1915794459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5468b60f11c9d7647898b0ff2bb877ec
-      internalID: 774880601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_13
-      rect:
-        serializedVersion: 2
         x: 64
         y: 0
         width: 64
@@ -410,29 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7affb9b295992f7419449931e32a86b8
-      internalID: 869270033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_Nadando_14
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6daf01ec230aef44b4fc5b130c4d756
-      internalID: 1660627026
+      spriteID: 42c816de1993f1a4cbfe582770acd3b6
+      internalID: 558634270
       vertices: []
       indices: 
       edges: []
@@ -448,21 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Atun_Nadando_0: -1812892304
-      Atun_Nadando_1: 1296456895
-      Atun_Nadando_10: 1318250201
-      Atun_Nadando_11: 1915794459
-      Atun_Nadando_12: 774880601
-      Atun_Nadando_13: 869270033
-      Atun_Nadando_14: 1660627026
-      Atun_Nadando_2: 1550593406
-      Atun_Nadando_3: -1950521695
-      Atun_Nadando_4: 209421100
-      Atun_Nadando_5: 1409740785
-      Atun_Nadando_6: -1454468900
-      Atun_Nadando_7: -1037625959
-      Atun_Nadando_8: -1820431456
-      Atun_Nadando_9: 1058610125
+      Atun_Nadando_0: -1110072896
+      Atun_Nadando_1: -1678012044
+      Atun_Nadando_2: 971922056
+      Atun_Nadando_3: 1592818564
+      Atun_Nadando_4: -1495799387
+      Atun_Nadando_5: 1474688662
+      Atun_Nadando_6: 1259602101
+      Atun_Nadando_7: 558634270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

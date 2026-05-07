@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43d5878af96329b4298ae594a96d215f
+guid: ebd76ed55d99b2e4ab07010e6476b0fa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe58d1350f82af4dbd5b4b2f452fd31
-      internalID: -1402160557
+      spriteID: 05d254cf89abb2b44affa5fb3235b4de
+      internalID: -1358842625
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdb2315ff05a1fb4390bf5d30e1e1655
-      internalID: 1106878419
+      spriteID: cb3d2e730ab585d49911e9d876d4f322
+      internalID: -290655610
       vertices: []
       indices: 
       edges: []
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 192
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8e70c5dab24e0c44886d4f063ff37d1
-      internalID: -857368690
+      spriteID: 0a0bb25dda1b318459e2365462d2e7a2
+      internalID: -1865533654
       vertices: []
       indices: 
       edges: []
@@ -190,6 +190,48 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d880caccc51331c42acf1fc6fa746ee0
+      internalID: -2045931240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6d87423e1bc564b904a3c946b0ae8b
+      internalID: -1338745131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_5
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 192
         width: 64
         height: 64
@@ -200,50 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f125fc730cf1b9741a56fc6f0034a118
-      internalID: 188150430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_NadandoRapido_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8fb2b778e17876e4e9450fb04b16558c
-      internalID: 269435556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atun_NadandoRapido_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7642ad3a584e12747a591346e1c699e1
-      internalID: -781311469
+      spriteID: 6fce3a3cb064a0b40a42cad99868345d
+      internalID: 1444062868
       vertices: []
       indices: 
       edges: []
@@ -252,8 +252,8 @@ TextureImporter:
       name: Atun_NadandoRapido_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 64
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92f955a88b04ecd44a9525e6f219fc93
-      internalID: 1601222182
+      spriteID: 50781f2487232b84fa29acde687b84d3
+      internalID: 1010977092
       vertices: []
       indices: 
       edges: []
@@ -273,6 +273,132 @@ TextureImporter:
       name: Atun_NadandoRapido_7
       rect:
         serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c01f2107ec1614bac5b175aadcaec1
+      internalID: 1783248804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a04d9b365701c46bf8ab7f0f90bffd
+      internalID: 104056068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54be735ccfa421646aa91d10cefd05cd
+      internalID: -1721288033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137e03cf475315748bc063e8564558eb
+      internalID: 1413393548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acb400683a9f0c4fa962e7ecfd176af
+      internalID: -143431871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3378f8df1add04cbaad1f05aef61db
+      internalID: 1508921124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_13
+      rect:
+        serializedVersion: 2
         x: 192
         y: 128
         width: 64
@@ -284,14 +410,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9e5dcef88afa4c4ebfadd288ace44c0
-      internalID: 724727444
+      spriteID: bc998b63d54bdca48a2fb783421c5b83
+      internalID: 810799870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_8
+      name: Atun_NadandoRapido_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e48130b7f5fe1946b8fe1dd4037bef7
+      internalID: 272026135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_15
       rect:
         serializedVersion: 2
         x: 0
@@ -305,14 +452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e898a7bf943484eae04e275a1ca5a7
-      internalID: 1021010953
+      spriteID: 989a353256b93d64bafa54c1833d36a0
+      internalID: 1417475207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_9
+      name: Atun_NadandoRapido_16
       rect:
         serializedVersion: 2
         x: 64
@@ -326,14 +473,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09eab06e1cdc0594b99beeaac8de975b
-      internalID: -331885566
+      spriteID: 83a90ab8114a29e49a1927c4e60484d7
+      internalID: 1460815106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_10
+      name: Atun_NadandoRapido_17
       rect:
         serializedVersion: 2
         x: 128
@@ -347,14 +494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6871218d384d94547805a77c15ddc11c
-      internalID: -1896237241
+      spriteID: 9e3fb2dbcb11e5d45a490e7b5fba093f
+      internalID: 1649767877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_11
+      name: Atun_NadandoRapido_18
       rect:
         serializedVersion: 2
         x: 192
@@ -368,14 +515,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39dc834e9f67ac442bf9c6df774e4026
-      internalID: 448911939
+      spriteID: 4c4f4328baec75b4499ad92c748ecbc6
+      internalID: 2042772956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_12
+      name: Atun_NadandoRapido_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de8aad12d64f354c9460c395d50dc86
+      internalID: 205717360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_20
       rect:
         serializedVersion: 2
         x: 0
@@ -389,14 +557,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 143445ebd7a59ad4b819505f855b4483
-      internalID: -1287110681
+      spriteID: 90e6b63ce36e5a64484646d727e317bb
+      internalID: -208733891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atun_NadandoRapido_13
+      name: Atun_NadandoRapido_21
       rect:
         serializedVersion: 2
         x: 64
@@ -410,8 +578,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2146d247d16f52446bb321d1a346aea6
-      internalID: 1801567267
+      spriteID: e5a1937cb9b1fb2479e4afd7b839a234
+      internalID: -1334400931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f2560ebf6ee094fa9f3ba799c60bc0
+      internalID: 1304706319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Atun_NadandoRapido_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331e4d8dbc4ecd04bb509aae2747f47e
+      internalID: -767564199
       vertices: []
       indices: 
       edges: []
@@ -427,20 +637,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Atun_NadandoRapido_0: -1402160557
-      Atun_NadandoRapido_1: 1106878419
-      Atun_NadandoRapido_10: -1896237241
-      Atun_NadandoRapido_11: 448911939
-      Atun_NadandoRapido_12: -1287110681
-      Atun_NadandoRapido_13: 1801567267
-      Atun_NadandoRapido_2: -857368690
-      Atun_NadandoRapido_3: 188150430
-      Atun_NadandoRapido_4: 269435556
-      Atun_NadandoRapido_5: -781311469
-      Atun_NadandoRapido_6: 1601222182
-      Atun_NadandoRapido_7: 724727444
-      Atun_NadandoRapido_8: 1021010953
-      Atun_NadandoRapido_9: -331885566
+      Atun_NadandoRapido_0: -1358842625
+      Atun_NadandoRapido_1: -290655610
+      Atun_NadandoRapido_10: 1413393548
+      Atun_NadandoRapido_11: -143431871
+      Atun_NadandoRapido_12: 1508921124
+      Atun_NadandoRapido_13: 810799870
+      Atun_NadandoRapido_14: 272026135
+      Atun_NadandoRapido_15: 1417475207
+      Atun_NadandoRapido_16: 1460815106
+      Atun_NadandoRapido_17: 1649767877
+      Atun_NadandoRapido_18: 2042772956
+      Atun_NadandoRapido_19: 205717360
+      Atun_NadandoRapido_2: -1865533654
+      Atun_NadandoRapido_20: -208733891
+      Atun_NadandoRapido_21: -1334400931
+      Atun_NadandoRapido_22: 1304706319
+      Atun_NadandoRapido_23: -767564199
+      Atun_NadandoRapido_3: -2045931240
+      Atun_NadandoRapido_4: -1338745131
+      Atun_NadandoRapido_5: 1444062868
+      Atun_NadandoRapido_6: 1010977092
+      Atun_NadandoRapido_7: 1783248804
+      Atun_NadandoRapido_8: 104056068
+      Atun_NadandoRapido_9: -1721288033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
